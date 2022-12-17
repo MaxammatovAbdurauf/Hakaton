@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using HakatonApi.Entities;
 using Task = HakatonApi.Entities.Task;
-namespace Hakaton.Api.DataBase;
+namespace HakatonApi.DataBase;
 
 public class AppDbContext : DbContext
 {
