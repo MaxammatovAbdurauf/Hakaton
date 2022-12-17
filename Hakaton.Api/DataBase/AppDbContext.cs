@@ -11,4 +11,7 @@ public class AppDbContext : IdentityDbContext<User,Role,Guid>
     public DbSet<Task>? Tasks { get; set; }
     public DbSet<User>? Users { get; set; }
     public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
+    public DbSet<Course> Courses { get; set; }
+    public DbSet<UserCourse> UserCourses { get; set; }
+    public AppDbContext(DbContextOptions options) : base(options) { }
 }

@@ -4,7 +4,7 @@ namespace HakatonApi.Entities;
 public class Task
 {
     public Guid Id { get; set; }
-    public string? Title { get; set; }
+    public string? TaskName { get; set; }
     public string? TaskDescription { get; set; }
     public int MaxScore { get; set; }
     public TaskStatus Status { get; set; }
