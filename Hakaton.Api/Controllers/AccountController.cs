@@ -1,17 +1,13 @@
 ﻿using Hakaton.Api.Models;
-using HakatonApi.DataBase;
 using HakatonApi.Entities;
-using HakatonApi.Services.Interfaces;
 using Mapster;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace Hakaton.Api.Controller;
 
 [Route("api/[controller]")]
 [ApiController]
-
 public class AccountController : ControllerBase
 {
     private readonly SignInManager<User> _signInManager;
@@ -21,6 +17,7 @@ public class AccountController : ControllerBase
         _signInManager = signInManager;
         _userManager = userManager;
     }
+
     [HttpPost("signup")]
     public async Task<IActionResult> SignUp([FromForm] SignUpUserDto registerUserDto)
     {
@@ -33,6 +30,7 @@ public class AccountController : ControllerBase
         await _signInManager.SignInAsync(user, true);
         return Ok(user);
     }
+
     [HttpPost("signin")]
     public async Task<IActionResult> SignIn(string userName, string password)
     {

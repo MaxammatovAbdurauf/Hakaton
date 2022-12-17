@@ -22,7 +22,7 @@ public  static class ServiceCollection
     {
         services.AddDbContext<AppDbContext>(options =>
         {
-            options.UseNpgsql(connetionstring);
+            options.UseNpgsql(connetionstring).UseLazyLoadingProxies();
         });
     }
 

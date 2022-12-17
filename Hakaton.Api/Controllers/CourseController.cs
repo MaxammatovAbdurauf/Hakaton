@@ -22,21 +22,17 @@ public class CourseController : ControllerBase
 
     [HttpPost]
     [ProducesResponseType(typeof(Guid), StatusCodes.Status200OK)]
-    public async Task<IActionResult> CreateCourse(GetCourseDto getCourseDto)
+    public async Task<IActionResult> CreateCourse([FromForm]GetCourseDto getCourseDto)
     {
         var user = await userManager.GetUserAsync(User);
         var courseId = await courseService.CreateCourse(user.Id, getCourseDto);
         return Ok(courseId);
     }
 
-    [HttpGet("{courseId}")]
+    [HttpGet("courseId")]
     [ProducesResponseType(typeof(CourseView), StatusCodes.Status200OK)]
-    public async Task<IActionResult> GetCourseById(Guid courseId)
-    {
-        var course = await courseService.GetCourseById(courseId);
-        if (course is null) return BadRequest();
-        return Ok(course);
-    }
+    public async Task<IActionResult> GetCourseById(Guid courseId) => 
+        Ok(await courseService.GetCourseById(courseId));
 
     [HttpGet("all")]
     [ProducesResponseType(typeof(List<CourseView>), StatusCodes.Status200OK)]
@@ -44,28 +40,36 @@ public class CourseController : ControllerBase
         Ok(await courseService.GetCourses());
 
     [HttpPut]
-    [ProducesResponseType(typeof(CourseView), StatusCodes.Status200OK)]
-    public async Task<IActionResult> UpdateCourse(UpdateCourseDto updateCourseDto)
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    public async Task<IActionResult> UpdateCourse([FromForm]UpdateCourseDto updateCourseDto)
     {
         var user = await userManager.GetUserAsync(User);
-        await courseService.UpdateCourse(user.Id, updateCourseDto);
+        await courseService.UpdateCourse(updateCourseDto);
         return Ok();
     }
 
     [HttpDelete]
-    [ProducesResponseType(typeof(CourseView), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status200OK)]
     public async Task<IActionResult> DeleteCourse(Guid courseId)
     {
         await courseService.DeleteCourse(courseId);
         return Ok();
     }
 
-    [HttpGet("join")]
-    [ProducesResponseType(typeof(CourseView), StatusCodes.Status200OK)]
+    [HttpPost("join")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
     public async Task<IActionResult> JoinToCourse(Guid courseId)
     {
         var user = await userManager.GetUserAsync(User);
         await courseService.JointoCourse(user.Id, courseId);
         return Ok();
+    }
+
+    [HttpGet("members")]
+    [ProducesResponseType(typeof(List<User>), StatusCodes.Status200OK)]
+    public async Task<IActionResult> GetCourseMembers(Guid courseId)
+    {
+        var members = await courseService.GetCourseMembers(courseId);
+        return Ok(members);
     }
 }
