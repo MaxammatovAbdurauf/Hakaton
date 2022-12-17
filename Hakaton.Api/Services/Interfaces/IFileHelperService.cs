@@ -1,6 +1,9 @@
-﻿namespace HakatonApi.Services.Interfaces
+﻿using HakatonApi.Entities;
+
+namespace HakatonApi.Services.Interfaces
 {
-    public class IFileHelperService
+    public interface IFileHelperService
     {
+        Task<string?> SaveFileAsync(IFormFile file, EFileType fileTypeEnum, EFileFolder fileFolderEnum);
     }
 }

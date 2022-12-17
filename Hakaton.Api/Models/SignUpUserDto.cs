@@ -14,5 +14,10 @@ namespace Hakaton.Api.Models
         [Required]
         public string? Password { get; set; }
         public string? ConfirmPassword { get; set; }
+
+        [Required]
+        public string? Email { get; set; }
+
+        public IFormFile? Avatar { get; set; }
     }
 }

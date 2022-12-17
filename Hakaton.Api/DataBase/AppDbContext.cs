@@ -9,5 +9,6 @@ public class AppDbContext : IdentityDbContext<User,Role,Guid>
 {
     public DbSet<Result>? Results { get; set; }
     public DbSet<Task>? Tasks { get; set; }
-    public AppDbContext(DbContextOptions options) : base(options) { }
+    public DbSet<User>? Users { get; set; }
+    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 }
