@@ -29,4 +29,6 @@ public class UnitOfWork : IUnitOfWork
         context.Dispose();
         GC.SuppressFinalize(this);
     }
+
+    public Task<int> SaveAsync() => context.SaveChangesAsync();
 }

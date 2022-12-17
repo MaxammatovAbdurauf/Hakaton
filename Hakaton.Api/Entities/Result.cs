@@ -16,7 +16,7 @@ public class Result
 
     public Guid TaskId { get; set; }
     [ForeignKey(nameof(TaskId))]
-    public virtual Task? Task { get; set; }
+    public virtual HomeWork? Task { get; set; }
 }
 
 public enum EUserTaskStatus

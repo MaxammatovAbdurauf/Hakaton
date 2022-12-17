@@ -1,4 +1,4 @@
-﻿using HakatonApi.Dtos.CourseDtos;
+﻿using HakatonApi.Models.CourseDtos;
 using HakatonApi.Entities;
 using HakatonApi.Services;
 using Microsoft.AspNetCore.Authorization;
@@ -25,11 +25,11 @@ public class CourseController : ControllerBase
     public async Task<IActionResult> CreateCourse(GetCourseDto getCourseDto)
     {
         var user = await userManager.GetUserAsync(User);
-        await courseService.CreateCourse(user.Id, getCourseDto);
-        return Ok();
+        var key = await courseService.CreateCourse(user.Id, getCourseDto);
+        return Ok(key);
     }
 
-    [HttpGet]
+    [HttpGet("{courseId}")]
     [ProducesResponseType(typeof(CourseView), StatusCodes.Status200OK)]
     public async Task<IActionResult> GetCourseById(Guid courseId)
     {
@@ -38,7 +38,7 @@ public class CourseController : ControllerBase
         return Ok(course);
     }
 
-    [HttpGet]
+    [HttpGet("all")]
     [ProducesResponseType(typeof(List<CourseView>), StatusCodes.Status200OK)]
     public async Task<IActionResult> GetCourses() =>
         Ok(await courseService.GetCourses());
@@ -60,7 +60,7 @@ public class CourseController : ControllerBase
         return Ok();
     }
 
-    [HttpPost]
+    [HttpGet("join")]
     [ProducesResponseType(typeof(CourseView), StatusCodes.Status200OK)]
     public async Task<IActionResult> JoinToCourse(Guid courseId)
     {

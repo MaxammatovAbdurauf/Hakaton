@@ -1,13 +1,10 @@
-﻿using HakatonApi.DataBase.Repositories;
-using HakatonApi.Dtos.CourseDtos;
-using HakatonApi.Entities;
-using Task = System.Threading.Tasks.Task;
+﻿using HakatonApi.Models.CourseDtos;
 
 namespace HakatonApi.Services.Interfaces;
 
-public interface ICourseService 
+public interface ICourseService
 {
-    Task<CourseView> CreateCourse(Guid userId, GetCourseDto createCource);
+    Task<Guid> CreateCourse(Guid userId, GetCourseDto createCource);
     Task<CourseView> GetCourseById(Guid courseId);
     Task<List<CourseView>> GetCourses();
     Task UpdateCourse(Guid courseId, UpdateCourseDto updateCourceDto);

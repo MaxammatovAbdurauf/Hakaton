@@ -1,11 +1,10 @@
 ﻿using HakatonApi.DataBase.Repositories;
-using HakatonApi.Dtos.CourseDtos;
+using HakatonApi.Models.CourseDtos;
 using HakatonApi.Entities;
 using HakatonApi.Extensions.AddServiceFromAttribute;
 using HakatonApi.Services.Interfaces;
 using Mapster;
 using Microsoft.EntityFrameworkCore;
-using Task = System.Threading.Tasks.Task;
 
 namespace HakatonApi.Services;
 
@@ -15,7 +14,7 @@ public class CourseService : ICourseService
     private readonly IUnitOfWork context;
     public CourseService(IUnitOfWork _context) => context = _context;
 
-    public async Task<CourseView> CreateCourse(Guid userId, GetCourseDto createCource)
+    public async Task<Guid> CreateCourse(Guid userId, GetCourseDto createCource)
     {
         var key = Guid.NewGuid();
         var courseId = Guid.NewGuid();
@@ -37,10 +36,8 @@ public class CourseService : ICourseService
         };
 
         await context.CourseRepository.AddAsync(course);
-        context.Save();
-
-        var registeredCourse = context.CourseRepository.Find(c => c.Key == key);
-        return registeredCourse.Adapt<CourseView>();
+        await context.SaveAsync();
+        return key;
     }
 
     public async Task<CourseView> GetCourseById(Guid courseId)

@@ -1,4 +1,4 @@
-﻿namespace HakatonApi.Dtos.CourseDtos;
+﻿namespace HakatonApi.Models.CourseDtos;
 
 public class GetCourseDto
 {

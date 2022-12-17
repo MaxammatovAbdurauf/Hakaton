@@ -6,6 +6,6 @@ public class Course
     public Guid Key { get; set; }
     public string? CourseName { get; set; }
     public virtual List<UserCourse>? UserCourseList { get; set; }
-    public virtual List<Task>? Tasklist { get; set; }
+    public virtual List<HomeWork>? Tasklist { get; set; }
 
 }

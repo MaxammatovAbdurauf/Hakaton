@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 
 namespace HakatonApi.Entities;
-public class Task
+public class HomeWork
 {
     public Guid Id { get; set; }
     public string? TaskName { get; set; }
