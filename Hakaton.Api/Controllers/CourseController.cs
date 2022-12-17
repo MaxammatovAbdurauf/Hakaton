@@ -21,12 +21,12 @@ public class CourseController : ControllerBase
     }
 
     [HttpPost]
-    [ProducesResponseType(typeof(CourseView), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(Guid), StatusCodes.Status200OK)]
     public async Task<IActionResult> CreateCourse(GetCourseDto getCourseDto)
     {
         var user = await userManager.GetUserAsync(User);
-        var key = await courseService.CreateCourse(user.Id, getCourseDto);
-        return Ok(key);
+        var courseId = await courseService.CreateCourse(user.Id, getCourseDto);
+        return Ok(courseId);
     }
 
     [HttpGet("{courseId}")]
