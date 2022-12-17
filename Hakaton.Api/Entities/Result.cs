@@ -10,7 +10,7 @@ public class Result
     public EUserTaskStatus ResultStatus { get; set; }
 
     public Guid UserId { get; set; }
-    [ForeignKey(nameof(UserId))]  //UserConfiguration : IEntityTypeConfiguration<User> bu yerda foreign key va relational yozilgan
+    [ForeignKey(nameof(UserId))]  
     public virtual User? User { get; set; }
 
     public Guid TaskId { get; set; }
