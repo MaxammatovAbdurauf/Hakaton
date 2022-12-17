@@ -24,9 +24,9 @@ public class CourseService : ICourseService
             CourseName = createCource.CourseName,
             Key = key,
 
-            UserCourseList = new List<UserCourse>
+            CourseUsers = new List<CourseUser>
             {
-                new UserCourse
+                new CourseUser
                 {
                     CourseId = courseId,
                     UserId = userId,
@@ -53,38 +53,51 @@ public class CourseService : ICourseService
         return courses.Select(course => course.Adapt<CourseView>()).ToList();
     }
 
-    public async Task UpdateCourse(Guid courseId, UpdateCourseDto updateCourceDto)
+    public async Task UpdateCourse(UpdateCourseDto updateCourceDto)
     {
-        var course = context.CourseRepository.GetById(courseId);
-        if (course is null) return;
+        var course = context.CourseRepository.GetById(updateCourceDto.courseId);
+        if (course is null) throw new Exception ("Not Found");
 
         course.CourseName = updateCourceDto.CourseName;
-        context.Save();
+        await context.SaveAsync();
     }
 
     public async Task DeleteCourse(Guid courseId)
     {
         var course = context.CourseRepository.GetById(courseId);
-        if (course is null) return;
+        if (course is null) throw new Exception("Not Found");
         await context.CourseRepository.Remove(course);
-        context.Save();
+        await context.SaveAsync();
     }
 
     public async Task JointoCourse(Guid courseId, Guid userId)
     {
         var course = context.CourseRepository.GetById(courseId);
-        if (course is null) return;
 
-        if (course.UserCourseList!.Any(u => u.UserId == userId)) return;
+        if (course is null) 
+            throw new Exception("Not Found");
 
-        course.UserCourseList ??= new List<UserCourse>();
-        var userCourse = new UserCourse
+        if (course.CourseUsers!.Any(u => u.UserId == userId))
+            throw new Exception("You have already joined");
+
+        course.CourseUsers ??= new List<CourseUser>();
+        var courseUser = new CourseUser
         {
             UserId = userId,
             CourseId = course.Id,
             IsAdmin = false
         };
-        // await context.CourseRepository.AddAsync(userCourse);
-        context.Save();
+
+        await context.UserCourseRepository.AddAsync(courseUser);
+        await context.SaveAsync();
+    }
+
+    public async Task<List<User>> GetCourseMembers(Guid courseId)
+    {
+        var course = context.CourseRepository.GetById(courseId);
+        if (course is null) throw new Exception("Not Found");
+
+        var members = course.CourseUsers!.Select(userCourse => userCourse.User).ToList();
+        return members;
     }
 }
