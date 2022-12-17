@@ -1,0 +1,21 @@
+2022-12-18 00:18:49.995 +05:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-12-18 00:18:50.714 +05:00 [INF] Now listening on: https://localhost:7251
+2022-12-18 00:18:50.721 +05:00 [INF] Now listening on: http://localhost:5251
+2022-12-18 00:18:50.744 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-18 00:18:50.749 +05:00 [INF] Hosting environment: Development
+2022-12-18 00:18:50.754 +05:00 [INF] Content root path: D:\Hakaton\Hakaton.Api\
+2022-12-18 00:18:54.743 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7251/swagger/index.html - -
+2022-12-18 00:18:55.912 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7251/_framework/aspnetcore-browser-refresh.js - -
+2022-12-18 00:18:55.942 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7251/_vs/browserLink - -
+2022-12-18 00:18:55.949 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7251/swagger/index.html - - - 200 - text/html;charset=utf-8 1215.8702ms
+2022-12-18 00:18:55.965 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7251/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 52.8075ms
+2022-12-18 00:18:56.332 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7251/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 390.0122ms
+2022-12-18 00:18:56.556 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7251/swagger/v1/swagger.json - -
+2022-12-18 00:18:56.933 +05:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "POST Api.Course" for actions - HakatonApi.Controllers.CourseController.CreateCourse (HakatonApi),HakatonApi.Controllers.CourseController.JoinToCourse (HakatonApi). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-12-18 00:18:56.952 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7251/swagger/v1/swagger.json - - - 500 - text/plain;+charset=utf-8 396.4264ms

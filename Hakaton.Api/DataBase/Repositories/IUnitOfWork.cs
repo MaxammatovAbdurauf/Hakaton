@@ -3,6 +3,6 @@ namespace HakatonApi.DataBase.Repositories;
 
 public interface IUnitOfWork
 {
-    ICourseRepository courseRepository { get;}
+    ICourseRepository CourseRepository { get;}
     int Save();
 }

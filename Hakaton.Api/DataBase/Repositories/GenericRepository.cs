@@ -1,5 +1,6 @@
 ﻿using System.Linq.Expressions;
 using HakatonApi.DataBase;
+using HakatonApi.Extensions.AddServiceFromAttribute;
 using Microsoft.EntityFrameworkCore;
 
 namespace HakatonApi.DataBase.Repositories;

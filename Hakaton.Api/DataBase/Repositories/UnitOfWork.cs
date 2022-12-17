@@ -1,11 +1,14 @@
+using HakatonApi.Extensions.AddServiceFromAttribute;
+
 namespace HakatonApi.DataBase.Repositories;
 
+[Scoped]
 public class UnitOfWork : IUnitOfWork
 {
     private readonly AppDbContext context;
 
     private ICourseRepository _courseRepository;
-    public ICourseRepository courseRepository
+    public ICourseRepository CourseRepository
     {
         get
         {

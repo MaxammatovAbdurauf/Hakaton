@@ -1,8 +1,93 @@
-﻿using HakatonApi.Services.Interfaces;
+﻿using HakatonApi.DataBase.Repositories;
+using HakatonApi.Dtos.CourseDtos;
+using HakatonApi.Entities;
+using HakatonApi.Extensions.AddServiceFromAttribute;
+using HakatonApi.Services.Interfaces;
+using Mapster;
+using Microsoft.EntityFrameworkCore;
+using Task = System.Threading.Tasks.Task;
 
 namespace HakatonApi.Services;
 
+[Scoped]
 public class CourseService : ICourseService
 {
+    private readonly IUnitOfWork context;
+    public CourseService(IUnitOfWork _context) => context = _context;
 
+    public async Task<CourseView> CreateCourse(Guid userId, GetCourseDto createCource)
+    {
+        var key = Guid.NewGuid();
+        var courseId = Guid.NewGuid();
+        var course = new Course
+        {
+            Id = courseId,
+            CourseName = createCource.CourseName,
+            Key = key,
+
+            UserCourseList = new List<UserCourse>
+            {
+                new UserCourse
+                {
+                    CourseId = courseId,
+                    UserId = userId,
+                    IsAdmin = true
+                }
+            }
+        };
+
+        await context.CourseRepository.AddAsync(course);
+        context.Save();
+
+        var registeredCourse = context.CourseRepository.Find(c => c.Key == key);
+        return registeredCourse.Adapt<CourseView>();
+    }
+
+    public async Task<CourseView> GetCourseById(Guid courseId)
+    {
+        var course = context.CourseRepository.GetById(courseId);
+        if (course is null) return null;
+        else return course.Adapt<CourseView>();
+    }
+
+    public async Task<List<CourseView>> GetCourses()
+    {
+        var courses = await context.CourseRepository.GetAll().ToListAsync();
+        return courses.Select(course => course.Adapt<CourseView>()).ToList();
+    }
+
+    public async Task UpdateCourse(Guid courseId, UpdateCourseDto updateCourceDto)
+    {
+        var course = context.CourseRepository.GetById(courseId);
+        if (course is null) return;
+
+        course.CourseName = updateCourceDto.CourseName;
+        context.Save();
+    }
+
+    public async Task DeleteCourse(Guid courseId)
+    {
+        var course = context.CourseRepository.GetById(courseId);
+        if (course is null) return;
+        await context.CourseRepository.Remove(course);
+        context.Save();
+    }
+
+    public async Task JointoCourse(Guid courseId, Guid userId)
+    {
+        var course = context.CourseRepository.GetById(courseId);
+        if (course is null) return;
+
+        if (course.UserCourseList!.Any(u => u.UserId == userId)) return;
+
+        course.UserCourseList ??= new List<UserCourse>();
+        var userCourse = new UserCourse
+        {
+            UserId = userId,
+            CourseId = course.Id,
+            IsAdmin = false
+        };
+        // await context.CourseRepository.AddAsync(userCourse);
+        context.Save();
+    }
 }
