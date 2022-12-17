@@ -10,5 +10,8 @@ namespace HakatonApi.Controllers;
 [Authorize]
 public class CourseController : ControllerBase
 {
-    
+    public CourseController ()
+    {
+
+    }
 }
