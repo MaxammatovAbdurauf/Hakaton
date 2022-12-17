@@ -37,13 +37,13 @@ public class CourseService : ICourseService
 
         await context.CourseRepository.AddAsync(course);
         await context.SaveAsync();
-        return key;
+        return courseId;
     }
 
     public async Task<CourseView> GetCourseById(Guid courseId)
     {
         var course = context.CourseRepository.GetById(courseId);
-        if (course is null) return null;
+        if (course is null) throw new Exception("Not Found");
         else return course.Adapt<CourseView>();
     }
 
