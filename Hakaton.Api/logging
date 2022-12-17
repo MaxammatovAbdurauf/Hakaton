@@ -563,3 +563,17 @@ type=Map
    at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
    at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
 2022-12-18 01:32:17.493 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7251/Api.Course/all - - - 500 - text/plain;+charset=utf-8 3027.3786ms
+2022-12-18 01:42:15.626 +05:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-12-18 01:42:16.333 +05:00 [INF] Now listening on: https://localhost:7251
+2022-12-18 01:42:16.342 +05:00 [INF] Now listening on: http://localhost:5251
+2022-12-18 01:42:16.378 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-18 01:42:16.389 +05:00 [INF] Hosting environment: Development
+2022-12-18 01:42:16.397 +05:00 [INF] Content root path: D:\Hakaton\Hakaton.Api\
+2022-12-18 01:42:17.805 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7251/swagger/index.html - -
+2022-12-18 01:42:18.804 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7251/swagger/index.html - - - 200 - text/html;charset=utf-8 1001.4739ms
+2022-12-18 01:42:18.816 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7251/_framework/aspnetcore-browser-refresh.js - -
+2022-12-18 01:42:18.816 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7251/_vs/browserLink - -
+2022-12-18 01:42:18.863 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7251/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 47.6836ms
+2022-12-18 01:42:19.035 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7251/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 218.5108ms
+2022-12-18 01:42:19.226 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7251/swagger/v1/swagger.json - -
+2022-12-18 01:42:19.717 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7251/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 490.9830ms
