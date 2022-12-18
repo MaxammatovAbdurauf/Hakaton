@@ -1,6 +1,8 @@
-﻿namespace HakatonApi.DataBase.Repositories;
+﻿using HakatonApi.Entities;
 
-public interface IHomeRepository
+namespace HakatonApi.DataBase.Repositories;
+
+public interface IHomeWorkRepository : IGenericRepository<HomeWork>
 {
 
 }

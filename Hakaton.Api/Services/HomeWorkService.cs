@@ -1,26 +1,41 @@
-﻿using HakatonApi.Models.HomeWorkView;
+﻿using HakatonApi.DataBase.Repositories;
+using HakatonApi.Extensions.AddServiceFromAttribute;
+using HakatonApi.Models.HomeWorkDtos;
 using HakatonApi.Services.Interfaces;
 
 namespace HakatonApi.Services;
 
-public class HomeWorkRepository : IHomeWorkRepository
+[Scoped]
+public class HomeWorkService : IHomeWorkService
 {
-    public Task<HomeWorkView> CreateHomeWork(Guid Id, CreateHomeWorkDto createHomeWorkDto)
+    private readonly IUnitOfWork _context;
+
+    public HomeWorkService(IUnitOfWork context)
+    {
+        _context = context;
+    }
+
+    public Task<HomeWorkView> CreateHomeWork(Guid courseId, CreateHomeWorkDto createHomeWorkDto)
     {
         throw new NotImplementedException();
     }
 
-    public Task<HomeWorkView> UpdateHomeWork(Guid CourseKey, UpdateHomeWorkDto updateHomeWorkDto)
+    public Task DeleteHomeWork(Guid courseId, Guid homeWorkId)
     {
         throw new NotImplementedException();
     }
 
-    public Task<List<HomeWorkView>> GetTasks(Guid courseId)
+    public Task<HomeWorkView> GetHomeWorkById(Guid homeWorkId)
     {
         throw new NotImplementedException();
     }
 
-    public Task DeleteHomeWork(Guid HomeWorkId)
+    public Task<List<HomeWorkView>> GetHomeWorks()
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task<HomeWorkView> UpdateHomeWork(UpdateHomeWorkDto updateHomeWorkDto)
     {
         throw new NotImplementedException();
     }

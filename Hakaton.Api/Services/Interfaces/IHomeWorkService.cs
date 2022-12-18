@@ -1,13 +1,12 @@
-﻿using HakatonApi.Models.HomeWorkView;
-using Microsoft.AspNetCore.Mvc;
+﻿using HakatonApi.Models.HomeWorkDtos;
 
 namespace HakatonApi.Services.Interfaces;
 
-public interface IHomeWorkRepository
+public interface IHomeWorkService
 {
-    Task<HomeWorkView> CreateHomeWork(Guid Id,CreateHomeWorkDto createHomeWorkDto);
-    Task<HomeWorkView> UpdateHomeWork(Guid CourseKey,UpdateHomeWorkDto updateHomeWorkDto);
-    Task<List<HomeWorkView>> GetTasks(Guid courseId);
-    Task DeleteHomeWork();
-
+    Task<HomeWorkView> CreateHomeWork(Guid courseId,CreateHomeWorkDto createHomeWorkDto);
+    Task<List<HomeWorkView>> GetHomeWorks();
+    Task<HomeWorkView> GetHomeWorkById(Guid homeWorkId);
+    Task<HomeWorkView> UpdateHomeWork(UpdateHomeWorkDto updateHomeWorkDto);
+    Task DeleteHomeWork(Guid courseId, Guid homeWorkId);
 }

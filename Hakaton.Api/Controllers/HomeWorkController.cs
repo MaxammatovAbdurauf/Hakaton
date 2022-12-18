@@ -12,7 +12,6 @@ namespace HakatonApi.Controllers
         {
             return Ok();
         }
-        [HttpPost]
-        public IActionResult 
+        
     }
 }
