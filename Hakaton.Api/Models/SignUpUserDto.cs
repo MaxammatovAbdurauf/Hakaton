@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Hakaton.Api.Models
+namespace HakatonApi.Models
 {
     public class SignUpUserDto
     {
