@@ -76,7 +76,10 @@ public class AccountController : ControllerBase
     public async Task<IActionResult> DeleteAccount()
     {
         var user = await userManager.GetUserAsync(User);
+        
         accountService.DeleteAccount(user);
+        await signInManager.SignOutAsync();
+
         return Ok();
     }
 }
