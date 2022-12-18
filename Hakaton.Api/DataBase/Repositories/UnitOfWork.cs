@@ -16,6 +16,15 @@ public class UnitOfWork : IUnitOfWork
             return _courseRepository;
         }
     }
+    private IHomeWorkRepository _homeWorkRepository;
+    public IHomeWorkRepository HomeWorkRepository
+    {
+        get
+        {
+            if (_homeWorkRepository is null) _homeWorkRepository = new HomeWorkRepository(context);
+            return _homeWorkRepository;
+        }
+    }
 
     private IUserCourseRepository? _userCourseRepository;
     public IUserCourseRepository UserCourseRepository
