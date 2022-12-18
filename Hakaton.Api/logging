@@ -4705,3 +4705,17 @@ VALUES (@p0, @p1, @p2, @p3);
 2022-12-18 11:15:23.561 +05:00 [INF] Executed action HakatonApi.Controllers.StudentController.JoinToCourse (HakatonApi) in 28.6404ms
 2022-12-18 11:15:23.561 +05:00 [INF] Executed endpoint 'HakatonApi.Controllers.StudentController.JoinToCourse (HakatonApi)'
 2022-12-18 11:15:23.562 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7251/Student?courseId=ecb43df6-f438-45f0-a89e-d619816b1f63 - 0 - 200 0 - 31.9363ms
+2022-12-18 11:37:49.319 +05:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-12-18 11:37:50.872 +05:00 [INF] Now listening on: https://localhost:7251
+2022-12-18 11:37:50.878 +05:00 [INF] Now listening on: http://localhost:5251
+2022-12-18 11:37:50.929 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-18 11:37:50.936 +05:00 [INF] Hosting environment: Development
+2022-12-18 11:37:50.942 +05:00 [INF] Content root path: D:\Hakaton\Hakaton.Api\
+2022-12-18 11:37:52.857 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7251/swagger/index.html - -
+2022-12-18 11:37:53.866 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7251/_framework/aspnetcore-browser-refresh.js - -
+2022-12-18 11:37:53.882 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7251/_vs/browserLink - -
+2022-12-18 11:37:53.989 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7251/swagger/index.html - - - 200 - text/html;charset=utf-8 1139.3097ms
+2022-12-18 11:37:54.004 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7251/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 137.8265ms
+2022-12-18 11:37:54.187 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7251/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 306.3459ms
+2022-12-18 11:37:54.372 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7251/swagger/v1/swagger.json - -
+2022-12-18 11:37:54.911 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7251/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 538.8204ms

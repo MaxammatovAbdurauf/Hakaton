@@ -10,7 +10,7 @@ public class AppDbContext : IdentityDbContext<User, Role, Guid>
     public DbSet<HomeWork>? HomeWorks { get; set; }
     public DbSet<User>? Users { get; set; }
     public DbSet<Course> Courses { get; set; }
-    public DbSet<UserCourse> CourseUsers { get; set; }
+    public DbSet<CourseUser> CourseUsers { get; set; }
     public AppDbContext(DbContextOptions options) : base(options) { }
 
    protected override void OnModelCreating(ModelBuilder builder)

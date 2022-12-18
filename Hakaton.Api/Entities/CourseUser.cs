@@ -2,7 +2,7 @@
 
 namespace HakatonApi.Entities;
 
-public class UserCourse
+public class CourseUser
 {
     public Guid Id { get; set; }
     public bool IsAdmin { get; set; }

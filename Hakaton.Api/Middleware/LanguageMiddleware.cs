@@ -20,7 +20,7 @@ namespace HakatonApi.Middleware
                 throw new Exception("Language header missed!");
             }
 
-            RequestCulture.RequestLanguage = httpContext.Request.Headers["Language"];
+           // RequestCulture.RequestLanguage = httpContext.Request.Headers["Language"];
 
             return _next(httpContext);
 
