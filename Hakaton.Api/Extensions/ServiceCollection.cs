@@ -1,11 +1,10 @@
-﻿using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using HakatonApi.DataBase;
+﻿using HakatonApi.DataBase;
 using HakatonApi.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace HakatonApi.Extensions;
 
-public  static class ServiceCollection
+public static class ServiceCollection
 {
     public static void _AddCors(this IServiceCollection services)
     {
@@ -18,7 +17,7 @@ public  static class ServiceCollection
         });
     }
 
-    public static void _AddDbContext (this IServiceCollection services, string connetionstring)
+    public static void _AddDbContext(this IServiceCollection services, string connetionstring)
     {
         services.AddDbContext<AppDbContext>(options =>
         {
@@ -39,5 +38,4 @@ public  static class ServiceCollection
         })
                 .AddEntityFrameworkStores<AppDbContext>();
     }
-
 }

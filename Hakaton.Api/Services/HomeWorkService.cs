@@ -1,42 +1,52 @@
 ﻿using HakatonApi.DataBase.Repositories;
+using HakatonApi.Entities;
 using HakatonApi.Extensions.AddServiceFromAttribute;
 using HakatonApi.Models.HomeWorkDtos;
 using HakatonApi.Services.Interfaces;
+using Mapster;
+using Microsoft.EntityFrameworkCore;
 
 namespace HakatonApi.Services;
 
 [Scoped]
 public class HomeWorkService : IHomeWorkService
 {
-    private readonly IUnitOfWork _context;
+    private readonly IUnitOfWork context;
+    public HomeWorkService(IUnitOfWork context) => this.context = context;
 
-    public HomeWorkService(IUnitOfWork context)
+    public async Task<HomeWorkView> CreateHomeWork(Guid courseId, CreateHomeWorkDto createHomeWorkDto)
     {
-        _context = context;
+        var homeWork = createHomeWorkDto.Adapt<HomeWork>(); 
+        await  context.HomeWorkRepository.AddAsync(homeWork);
+        return homeWork.Adapt<HomeWorkView>();
     }
 
-    public Task<HomeWorkView> CreateHomeWork(Guid courseId, CreateHomeWorkDto createHomeWorkDto)
+    public async Task DeleteHomeWork(Guid courseId, Guid homeWorkId)
     {
-        throw new NotImplementedException();
+        var homeWork = context.HomeWorkRepository.GetById(homeWorkId);
+        if (homeWork is null) throw new Exception();
+        await context.HomeWorkRepository.Remove(homeWork);
     }
 
-    public Task DeleteHomeWork(Guid courseId, Guid homeWorkId)
+    public async  Task<HomeWorkView> GetHomeWorkById(Guid homeWorkId)
     {
-        throw new NotImplementedException();
+        var homeWork = context.HomeWorkRepository.GetById(homeWorkId);
+        if (homeWork is null) throw new Exception();
+        else return homeWork.Adapt<HomeWorkView>();
     }
 
-    public Task<HomeWorkView> GetHomeWorkById(Guid homeWorkId)
+    public async Task<List<HomeWorkView>> GetHomeWorks()
     {
-        throw new NotImplementedException();
+        var allHomeWorks = await context.HomeWorkRepository.GetAll().ToListAsync();
+        return allHomeWorks.Select(homework => homework.Adapt<HomeWorkView>()).ToList();
     }
 
-    public Task<List<HomeWorkView>> GetHomeWorks()
+    public async Task<HomeWorkView> UpdateHomeWork(UpdateHomeWorkDto updateHomeWorkDto)
     {
-        throw new NotImplementedException();
-    }
-
-    public Task<HomeWorkView> UpdateHomeWork(UpdateHomeWorkDto updateHomeWorkDto)
-    {
-        throw new NotImplementedException();
+        var homeWork = context.HomeWorkRepository.GetById(updateHomeWorkDto.Id);
+        if (homeWork is null) throw new Exception();
+        var homework = updateHomeWorkDto.Adapt<HomeWork>();
+        await context.HomeWorkRepository.Update(homework);
+        return homework.Adapt<HomeWorkView>();
     }
 }

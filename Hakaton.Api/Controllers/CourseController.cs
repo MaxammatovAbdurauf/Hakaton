@@ -1,6 +1,6 @@
 ﻿using HakatonApi.Models.CourseDtos;
 using HakatonApi.Entities;
-using HakatonApi.Services;
+using HakatonApi.Services.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -12,9 +12,9 @@ namespace HakatonApi.Controllers;
 [Authorize]
 public class CourseController : ControllerBase
 {
-    private readonly CourseService courseService;
+    private readonly ICourseService courseService;
     private readonly UserManager<User> userManager;
-    public CourseController(CourseService _courseService, UserManager<User> _userManager)
+    public CourseController(ICourseService _courseService, UserManager<User> _userManager)
     {
         courseService = _courseService;
         userManager = _userManager;

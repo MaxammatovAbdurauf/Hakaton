@@ -1,7 +1,7 @@
 ﻿using HakatonApi.Entities;
+using HakatonApi.Services.Interfaces;
 using HakatonApi.Models;
 using HakatonApi.Models.UserDtos;
-using HakatonApi.Services;
 using Mapster;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -15,11 +15,11 @@ public class AccountController : ControllerBase
 {
     private readonly SignInManager<User> signInManager;
     private readonly UserManager<User> userManager;
-    private readonly AccountService accountService;
+    private readonly IAccountService accountService;
 
     public AccountController(SignInManager<User> signInManager,
                                UserManager<User> userManager,
-                               AccountService accountService)
+                               IAccountService accountService)
     {
         this.signInManager = signInManager;
         this.userManager = userManager;
