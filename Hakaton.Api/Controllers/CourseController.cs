@@ -72,4 +72,6 @@ public class CourseController : ControllerBase
         var members = await courseService.GetCourseMembers(courseId);
         return Ok(members);
     }
+
+
 }
