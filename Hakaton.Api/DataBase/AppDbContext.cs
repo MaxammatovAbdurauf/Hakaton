@@ -1,16 +1,106 @@
 ﻿using HakatonApi.Entities;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using HomeWork = HakatonApi.Entities.HomeWork;
 
 namespace HakatonApi.DataBase;
 
-public class AppDbContext : IdentityDbContext<User,Role,Guid>
+public class AppDbContext : IdentityDbContext<User, Role, Guid>
 {
     public DbSet<Result>? Results { get; set; }
     public DbSet<HomeWork>? HomeWorks { get; set; }
-    public DbSet<User>? Users { get; set; }
-    public DbSet<Course> Courses { get; set; }
-    public DbSet<CourseUser> CourseUsers { get; set; }
+    public DbSet<Course>? Courses { get; set; } 
+    public DbSet<CourseUser>? CourseUsers { get; set; }
     public AppDbContext(DbContextOptions options) : base(options) { }
+
+    protected override void OnModelCreating(ModelBuilder builder)
+    {
+        base.OnModelCreating(builder);
+
+        var userId = Guid.NewGuid();
+        var courseId = Guid.NewGuid();
+        var homeWorkId1 = Guid.NewGuid();
+        var homeWorkId2 = Guid.NewGuid();
+
+        builder.Entity<User>().HasData(new List<User>
+        {
+            new User
+            {
+                Id        = userId,
+                UserName  = "Abdurauf",
+                FirstName = "Abdurauf",
+                LastName  = "Makhammatov",
+            }
+        });
+
+        builder.Entity<HomeWork>().HasData(new List<HomeWork>
+        {
+            new HomeWork
+            {
+                Id = homeWorkId1,
+                TaskName = "50 ta listga referat yozib keling",
+                TaskDescription ="bahonalar o`tmaydi, hatto spravka ham",
+                CreateDate = DateTime.UtcNow,
+                MaxScore = 100,
+                Status = Entities.TaskStatus.created,
+                CourseId = courseId
+            },
+
+            new HomeWork
+            {
+                Id = homeWorkId2,
+                TaskName = "50 ta listga referat yozib keling",
+                TaskDescription ="bahonalar o`tmaydi, hatto spravka ham",
+                CreateDate = DateTime.UtcNow,
+                MaxScore = 100,
+                Status = Entities.TaskStatus.created,
+                CourseId = courseId
+            }
+        });
+
+        builder.Entity<Course>().HasData(new List<Course>
+        {
+            new Course
+            {
+                Id          = courseId,
+                Key         = Guid.NewGuid(),
+                CourseName  =  "firstRoom",
+
+                CourseUsers = new List<CourseUser>
+                {
+                    new CourseUser
+                    {
+                        Id       = Guid.NewGuid(),
+                        CourseId = courseId,
+                        UserId   = userId,
+                         IsAdmin = true
+                    }
+                },
+            }
+        });
+
+        builder.Entity<Result>().HasData(new List<Result>
+        {
+            new Result
+            {
+                UserId = userId,
+                HomeWorkId = homeWorkId1,
+                Score = 56,
+                TeacherComment = "Men yorvorganman",
+                StudentComment = "Cut the bullshit",
+                CompletedTime = DateTime.Now,
+                ResultStatus = EUserTaskStatus.rejected,
+            },
+
+            new Result
+            {
+                UserId = userId,
+                HomeWorkId = homeWorkId2,
+                TeacherComment = "WOW",
+                StudentComment = "In shaa Allah",
+                Score = 96,
+                CompletedTime = DateTime.Now,
+                ResultStatus = EUserTaskStatus.accepted,
+            }
+        });
+    }
 }

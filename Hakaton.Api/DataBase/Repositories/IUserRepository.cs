@@ -2,7 +2,7 @@
 
 namespace HakatonApi.DataBase.Repositories;
 
-public interface IUserCourseRepository : IGenericRepository<CourseUser>
+public interface IUserRepository : IGenericRepository<User>
 {
 
 }

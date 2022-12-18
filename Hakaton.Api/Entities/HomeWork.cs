@@ -13,7 +13,11 @@ public class HomeWork
     public DateTime? StartDate { get; set; }
     public DateTime? EndDate { get; set; }
 
-    public virtual List<Result>? UserTasks { get; set; }
+    public Guid CourseId { get; set; }
+    [ForeignKey(nameof(CourseId))]
+    public virtual Course? Course { get; set; }  
+
+    public virtual List<Result>? Results { get; set; }
 }
 
 public enum TaskStatus

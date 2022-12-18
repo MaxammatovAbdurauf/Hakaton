@@ -4,7 +4,8 @@ namespace HakatonApi.DataBase.Repositories;
 public interface IUnitOfWork
 {
     ICourseRepository CourseRepository { get;}
-    IUserCourseRepository UserCourseRepository { get;}
+    ICourseUserRepository CourseUserRepository { get;}
+    IUserRepository UserRepository { get;}
     int Save();
     Task<int> SaveAsync();
 }

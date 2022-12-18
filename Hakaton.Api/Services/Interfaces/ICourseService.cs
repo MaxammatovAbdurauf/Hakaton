@@ -10,6 +10,5 @@ public interface ICourseService
     Task<List<CourseView>> GetCourses();
     Task UpdateCourse(UpdateCourseDto updateCourceDto);
     Task DeleteCourse(Guid courseId);
-    Task JointoCourse(Guid courseId, Guid userId);
     Task<List<User>> GetCourseMembers(Guid courseId);
 }

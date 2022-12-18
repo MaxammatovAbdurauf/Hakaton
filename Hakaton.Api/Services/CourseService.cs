@@ -70,28 +70,6 @@ public class CourseService : ICourseService
         await context.SaveAsync();
     }
 
-    public async Task JointoCourse(Guid courseId, Guid userId)
-    {
-        var course = context.CourseRepository.GetById(courseId);
-
-        if (course is null) 
-            throw new Exception("Not Found");
-
-        if (course.CourseUsers!.Any(u => u.UserId == userId))
-            throw new Exception("You have already joined");
-
-        course.CourseUsers ??= new List<CourseUser>();
-        var courseUser = new CourseUser
-        {
-            UserId = userId,
-            CourseId = course.Id,
-            IsAdmin = false
-        };
-
-        await context.UserCourseRepository.AddAsync(courseUser);
-        await context.SaveAsync();
-    }
-
     public async Task<List<User>> GetCourseMembers(Guid courseId)
     {
         var course = context.CourseRepository.GetById(courseId);
