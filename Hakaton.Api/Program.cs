@@ -1,5 +1,6 @@
 using HakatonApi.Extensions;
 using HakatonApi.Extensions.AddServiceFromAttribute;
+using HakatonApi.Helpers;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,12 +14,18 @@ builder.Services._AddDbContext(builder.Configuration.GetConnectionString("PostGr
 builder.Services._AddIdentity();
 builder._AddSerilogWithConfig();
 builder.Services._AddServicesViaAttribute();
+builder.Services.AddHttpContextAccessor();
 
 var app = builder.Build();
 
 app.UseSwagger();
 app.UseSwaggerUI();
 app.UseHttpsRedirection();
+
+if (app.Services.GetRequiredService<HttpContextAccessor>() != null)
+{
+    HttpContextHelper.Accessor = app.Services.GetRequiredService<HttpContextAccessor>();
+}
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();

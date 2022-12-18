@@ -1,4 +1,5 @@
 ﻿using HakatonApi.Entities;
+using HakatonApi.Filters;
 using HakatonApi.Models;
 using HakatonApi.Models.UserDtos;
 using HakatonApi.Services;
@@ -11,6 +12,7 @@ namespace HakatonApi.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
+[ValidateModel]
 public class AccountController : ControllerBase
 {
     private readonly SignInManager<User> signInManager;

@@ -7,7 +7,7 @@ public class HomeWork
     public string? TaskName { get; set; }
     public string? TaskDescription { get; set; }
     public int MaxScore { get; set; }
-    public TaskStatus Status { get; set; }
+    public ETaskStatus Status { get; set; }
     public string? FilePath { get; set; }
     public DateTime? CreateDate { get; set; }
     public DateTime? StartDate { get; set; }
@@ -17,12 +17,6 @@ public class HomeWork
     [ForeignKey(nameof(CourseId))]
     public virtual Course? Course { get; set; }  
 
-    public virtual List<Result>? Results { get; set; }
+    public virtual List<Comment>? Comments { get; set; }
 }
 
-public enum TaskStatus
-{
-    created,
-    delayed,
-    finished,
-}

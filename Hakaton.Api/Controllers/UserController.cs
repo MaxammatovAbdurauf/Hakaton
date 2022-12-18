@@ -2,11 +2,13 @@
 using HakatonApi.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using HakatonApi.Filters;
 
 namespace HakatonApi.Controllers;
 
 [Route("[controller]")]
 [ApiController]
+[ValidateModel]
 public class UserController : Controller
 {
     private readonly UserService studentService;

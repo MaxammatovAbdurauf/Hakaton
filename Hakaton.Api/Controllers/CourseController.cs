@@ -4,12 +4,14 @@ using HakatonApi.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using HakatonApi.Filters;
 
 namespace HakatonApi.Controllers;
 
 [Route("Api.[controller]")]
 [ApiController]
 [Authorize]
+[ValidateModel]
 public class CourseController : ControllerBase
 {
     private readonly CourseService courseService;

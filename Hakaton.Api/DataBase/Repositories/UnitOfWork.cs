@@ -38,6 +38,16 @@ public class UnitOfWork : IUnitOfWork
             return (_userCourseRepository);
         }
     }
+    private ITaskCommentRepository _taskCommentRepository;
+
+    public ITaskCommentRepository TaskCommentRepository
+    {
+        get
+        {
+            if (_taskCommentRepository is null) _taskCommentRepository = new TaskCommentRepository(context);
+            return _taskCommentRepository;
+        }
+    }
 
     private IUserRepository _userRepository;
     public IUserRepository UserRepository
