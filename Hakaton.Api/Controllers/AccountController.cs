@@ -1,10 +1,10 @@
-﻿using Hakaton.Api.Models;
-using HakatonApi.Entities;
+﻿using HakatonApi.Entities;
+using HakatonApi.Models;
 using Mapster;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Hakaton.Api.Controller;
+namespace HakatonApi.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]

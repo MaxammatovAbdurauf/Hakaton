@@ -2,7 +2,7 @@
 
 namespace HakatonApi.DataBase.Repositories;
 
-public class UserCourseRepository : GenericRepository<CourseUser>, IUserCourseRepository
+public class UserCourseRepository : GenericRepository<UserCourse>, IUserCourseRepository
 {
     public UserCourseRepository(AppDbContext context) : base (context) { }
 }

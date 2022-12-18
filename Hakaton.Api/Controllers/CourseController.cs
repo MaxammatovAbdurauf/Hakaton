@@ -61,7 +61,7 @@ public class CourseController : ControllerBase
     public async Task<IActionResult> JoinToCourse(Guid courseId)
     {
         var user = await userManager.GetUserAsync(User);
-        await courseService.JointoCourse(user.Id, courseId);
+        await courseService.JointoCourse(courseId, user.Id);
         return Ok();
     }
 

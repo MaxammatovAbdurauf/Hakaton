@@ -24,9 +24,9 @@ public class CourseService : ICourseService
             CourseName = createCource.CourseName,
             Key = key,
 
-            CourseUsers = new List<CourseUser>
+            CourseUsers = new List<UserCourse>
             {
-                new CourseUser
+                new UserCourse
                 {
                     CourseId = courseId,
                     UserId = userId,
@@ -80,8 +80,8 @@ public class CourseService : ICourseService
         if (course.CourseUsers!.Any(u => u.UserId == userId))
             throw new Exception("You have already joined");
 
-        course.CourseUsers ??= new List<CourseUser>();
-        var courseUser = new CourseUser
+        course.CourseUsers ??= new List<UserCourse>();
+        var courseUser = new UserCourse
         {
             UserId = userId,
             CourseId = course.Id,
