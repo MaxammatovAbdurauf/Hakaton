@@ -5,11 +5,10 @@ namespace HakatonApi.Services.Interfaces;
 
 public interface ICourseService
 {
-    Task<Guid> CreateCourse(Guid userId, GetCourseDto createCource);
+    Task<Guid> CreateCourse(Guid userId, CreateCourseDto createCource);
     Task<CourseView> GetCourseById(Guid courseId);
     Task<List<CourseView>> GetCourses();
     Task UpdateCourse(UpdateCourseDto updateCourceDto);
     Task DeleteCourse(Guid courseId);
-    Task JointoCourse(Guid courseId, Guid userId);
     Task<List<User>> GetCourseMembers(Guid courseId);
 }

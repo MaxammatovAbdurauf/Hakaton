@@ -22,7 +22,7 @@ public class CourseController : ControllerBase
 
     [HttpPost]
     [ProducesResponseType(typeof(Guid), StatusCodes.Status200OK)]
-    public async Task<IActionResult> CreateCourse([FromForm]GetCourseDto getCourseDto)
+    public async Task<IActionResult> CreateCourse([FromForm]CreateCourseDto getCourseDto)
     {
         var user = await userManager.GetUserAsync(User);
         var courseId = await courseService.CreateCourse(user.Id, getCourseDto);
