@@ -1,7 +1,7 @@
-﻿namespace HakatonApi.Entities
+﻿namespace HakatonApi.Entities;
+
+public enum EFileFolder
 {
-    public enum EFileFolder
-    {
-        User
-    }
+    User,
+    HomeWork
 }

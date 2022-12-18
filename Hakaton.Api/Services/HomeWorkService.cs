@@ -12,11 +12,26 @@ namespace HakatonApi.Services;
 public class HomeWorkService : IHomeWorkService
 {
     private readonly IUnitOfWork context;
-    public HomeWorkService(IUnitOfWork context) => this.context = context;
+    private readonly IFileHelperService fileHelperService;
+    public HomeWorkService(IUnitOfWork context, IFileHelperService fileHelperService)
+    {
+        this.context = context;
+        this.fileHelperService = fileHelperService;
+    }
 
     public async Task<HomeWorkView> CreateHomeWork(Guid courseId, CreateHomeWorkDto createHomeWorkDto)
     {
-        var homeWork = createHomeWorkDto.Adapt<HomeWork>(); 
+        var filePath = await fileHelperService.SaveFileAsync(createHomeWorkDto.File!,EFileType.Files, EFileFolder.HomeWork);
+        var homeWork = new HomeWork 
+        {
+            TaskDescription = createHomeWorkDto.TaskDescription,
+            TaskName = createHomeWorkDto.TaskName,
+            CourseId = courseId,
+            StartDate = createHomeWorkDto.StartDate,
+            EndDate = createHomeWorkDto.EndDate,
+            FilePath = filePath
+            
+        }; 
         await  context.HomeWorkRepository.AddAsync(homeWork);
         return homeWork.Adapt<HomeWorkView>();
     }

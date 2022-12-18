@@ -14,11 +14,11 @@ public class HomeWorkController : ControllerBase
     public HomeWorkController(IHomeWorkService homeWorkService) => this.homeWorkService = homeWorkService ;
 
     [HttpPost]
-    [ProducesResponseType(StatusCodes.Status200OK)]
-    public async Task<IActionResult> CreateHomeWork(Guid courseId, CreateHomeWorkDto createHomeWorkDto)
+    [ProducesResponseType(typeof(HomeWorkView),StatusCodes.Status200OK)]
+    public async Task<IActionResult> CreateHomeWork(Guid courseId,[FromForm] CreateHomeWorkDto createHomeWorkDto)
     {
-        await homeWorkService.CreateHomeWork(courseId, createHomeWorkDto);
-        return Ok();
+        var homeWorkView = await homeWorkService.CreateHomeWork(courseId, createHomeWorkDto);
+        return Ok(homeWorkView);
     }
 
     [HttpDelete]
@@ -33,8 +33,8 @@ public class HomeWorkController : ControllerBase
     [ProducesResponseType(StatusCodes.Status200OK)]
     public async Task<IActionResult> GetHomeWorkById(Guid homeWorkId)
     {
-        await homeWorkService.GetHomeWorkById(homeWorkId);
-        return Ok();
+        var homework  = await homeWorkService.GetHomeWorkById(homeWorkId);
+        return Ok(homework);
     }
 
     [HttpGet("all")]

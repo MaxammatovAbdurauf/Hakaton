@@ -5,6 +5,7 @@ namespace HakatonApi.Models.HomeWorkDtos;
 
 public class HomeWorkView
 {
+    public Guid Id { get; set; }
     public string? TaskName { get; set; }
     public string? TaskDescription { get; set; }
     public int MaxScore { get; set; }
