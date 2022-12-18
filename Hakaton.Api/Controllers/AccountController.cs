@@ -1,5 +1,7 @@
 ﻿using HakatonApi.Entities;
 using HakatonApi.Models;
+using HakatonApi.Models.UserDtos;
+using HakatonApi.Services;
 using Mapster;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
