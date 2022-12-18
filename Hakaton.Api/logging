@@ -563,6 +563,699 @@ type=Map
    at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
    at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
 2022-12-18 01:32:17.493 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7251/Api.Course/all - - - 500 - text/plain;+charset=utf-8 3027.3786ms
+2022-12-18 01:42:15.626 +05:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-12-18 01:42:16.333 +05:00 [INF] Now listening on: https://localhost:7251
+2022-12-18 01:42:16.342 +05:00 [INF] Now listening on: http://localhost:5251
+2022-12-18 01:42:16.378 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-18 01:42:16.389 +05:00 [INF] Hosting environment: Development
+2022-12-18 01:42:16.397 +05:00 [INF] Content root path: D:\Hakaton\Hakaton.Api\
+2022-12-18 01:42:17.805 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7251/swagger/index.html - -
+2022-12-18 01:42:18.804 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7251/swagger/index.html - - - 200 - text/html;charset=utf-8 1001.4739ms
+2022-12-18 01:42:18.816 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7251/_framework/aspnetcore-browser-refresh.js - -
+2022-12-18 01:42:18.816 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7251/_vs/browserLink - -
+2022-12-18 01:42:18.863 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7251/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 47.6836ms
+2022-12-18 01:42:19.035 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7251/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 218.5108ms
+2022-12-18 01:42:19.226 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7251/swagger/v1/swagger.json - -
+2022-12-18 01:42:19.717 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7251/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 490.9830ms
+2022-12-18 02:01:25.044 +05:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-12-18 02:01:25.808 +05:00 [INF] Now listening on: https://localhost:7251
+2022-12-18 02:01:25.816 +05:00 [INF] Now listening on: http://localhost:5251
+2022-12-18 02:01:25.841 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-18 02:01:25.849 +05:00 [INF] Hosting environment: Development
+2022-12-18 02:01:25.856 +05:00 [INF] Content root path: D:\Hakaton\Hakaton.Api\
+2022-12-18 02:01:28.193 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7251/swagger/index.html - -
+2022-12-18 02:01:29.506 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7251/_framework/aspnetcore-browser-refresh.js - -
+2022-12-18 02:01:29.510 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7251/_vs/browserLink - -
+2022-12-18 02:01:29.536 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7251/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 29.2560ms
+2022-12-18 02:01:29.541 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7251/swagger/index.html - - - 200 - text/html;charset=utf-8 1365.1250ms
+2022-12-18 02:01:29.713 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7251/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 202.5367ms
+2022-12-18 02:01:29.998 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7251/swagger/v1/swagger.json - -
+2022-12-18 02:01:30.613 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7251/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 615.1012ms
+2022-12-18 02:02:04.008 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7251/api/Account/signup multipart/form-data;+boundary=----WebKitFormBoundarycuIiN45n4c96PlT6 758
+2022-12-18 02:02:09.962 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: None
+2022-12-18 02:02:13.459 +05:00 [INF] Executed DbCommand (293ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."AvatarUrl", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."Password", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."Id" = @__get_Item_0
+LIMIT 1
+2022-12-18 02:02:14.443 +05:00 [INF] Executed DbCommand (53ms) [Parameters=[@__user_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ClaimType", a."ClaimValue", a."UserId"
+FROM "AspNetUserClaims" AS a
+WHERE a."UserId" = @__user_Id_0
+2022-12-18 02:02:14.655 +05:00 [INF] Executed DbCommand (45ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT a0."Name"
+FROM "AspNetUserRoles" AS a
+INNER JOIN "AspNetRoles" AS a0 ON a."RoleId" = a0."Id"
+WHERE a."UserId" = @__userId_0
+2022-12-18 02:02:14.721 +05:00 [INF] Executing endpoint 'Hakaton.Api.Controller.AccountController.SignUp (HakatonApi)'
+2022-12-18 02:02:14.790 +05:00 [INF] Route matched with {action = "SignUp", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignUp(Hakaton.Api.Models.SignUpUserDto) on controller Hakaton.Api.Controller.AccountController (HakatonApi).
+2022-12-18 02:02:15.621 +05:00 [INF] Executed DbCommand (27ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."AvatarUrl", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."Password", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2022-12-18 02:02:16.370 +05:00 [INF] Executed DbCommand (72ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Int32), @p2='?', @p3='?', @p4='?', @p5='?' (DbType = Boolean), @p6='?', @p7='?', @p8='?' (DbType = Boolean), @p9='?' (DbType = DateTime), @p10='?', @p11='?', @p12='?', @p13='?', @p14='?', @p15='?' (DbType = Boolean), @p16='?', @p17='?' (DbType = Boolean), @p18='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "AspNetUsers" ("Id", "AccessFailedCount", "AvatarUrl", "ConcurrencyStamp", "Email", "EmailConfirmed", "FirstName", "LastName", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "Password", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18);
+2022-12-18 02:02:16.543 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__user_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ClaimType", a."ClaimValue", a."UserId"
+FROM "AspNetUserClaims" AS a
+WHERE a."UserId" = @__user_Id_0
+2022-12-18 02:02:16.562 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT a0."Name"
+FROM "AspNetUserRoles" AS a
+INNER JOIN "AspNetRoles" AS a0 ON a."RoleId" = a0."Id"
+WHERE a."UserId" = @__userId_0
+2022-12-18 02:02:16.593 +05:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2022-12-18 02:02:16.640 +05:00 [INF] Executing OkObjectResult, writing value of type 'HakatonApi.Entities.User'.
+2022-12-18 02:02:16.730 +05:00 [INF] Executed action Hakaton.Api.Controller.AccountController.SignUp (HakatonApi) in 1906.6558ms
+2022-12-18 02:02:16.738 +05:00 [INF] Executed endpoint 'Hakaton.Api.Controller.AccountController.SignUp (HakatonApi)'
+2022-12-18 02:02:16.774 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7251/api/Account/signup multipart/form-data;+boundary=----WebKitFormBoundarycuIiN45n4c96PlT6 758 - 200 - application/json;+charset=utf-8 12766.5673ms
+2022-12-18 02:02:34.317 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7251/Api.Course application/json 31
+2022-12-18 02:02:34.387 +05:00 [INF] Executing endpoint 'HakatonApi.Controllers.CourseController.CreateCourse (HakatonApi)'
+2022-12-18 02:02:34.407 +05:00 [INF] Route matched with {action = "CreateCourse", controller = "Course"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateCourse(HakatonApi.Models.CourseDtos.GetCourseDto) on controller HakatonApi.Controllers.CourseController (HakatonApi).
+2022-12-18 02:02:34.599 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: None
+2022-12-18 02:02:34.635 +05:00 [INF] Executed DbCommand (14ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."AvatarUrl", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."Password", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."Id" = @__get_Item_0
+LIMIT 1
+2022-12-18 02:02:34.878 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?', @p2='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Courses" ("Id", "CourseName", "Key")
+VALUES (@p0, @p1, @p2);
+2022-12-18 02:02:34.933 +05:00 [INF] Executed DbCommand (41ms) [Parameters=[@p3='?' (DbType = Guid), @p4='?' (DbType = Guid), @p5='?' (DbType = Boolean), @p6='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "UserCourses" ("Id", "CourseId", "IsAdmin", "UserId")
+VALUES (@p3, @p4, @p5, @p6);
+2022-12-18 02:02:34.959 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Guid'.
+2022-12-18 02:02:34.967 +05:00 [INF] Executed action HakatonApi.Controllers.CourseController.CreateCourse (HakatonApi) in 552.0312ms
+2022-12-18 02:02:34.972 +05:00 [INF] Executed endpoint 'HakatonApi.Controllers.CourseController.CreateCourse (HakatonApi)'
+2022-12-18 02:02:34.979 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7251/Api.Course application/json 31 - 200 - application/json;+charset=utf-8 662.0018ms
+2022-12-18 02:02:57.937 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7251/Api.Course/e5d4bd47-14d8-4865-ab46-3f62e3c70d02 - -
+2022-12-18 02:02:57.970 +05:00 [INF] Executing endpoint 'HakatonApi.Controllers.CourseController.GetCourseById (HakatonApi)'
+2022-12-18 02:02:57.978 +05:00 [INF] Route matched with {action = "GetCourseById", controller = "Course"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCourseById(System.Guid) on controller HakatonApi.Controllers.CourseController (HakatonApi).
+2022-12-18 02:03:02.111 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: None
+2022-12-18 02:03:02.190 +05:00 [INF] Executed DbCommand (9ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."CourseName", c."Key"
+FROM "Courses" AS c
+WHERE c."Id" = @__get_Item_0
+LIMIT 1
+2022-12-18 02:03:05.017 +05:00 [INF] Executing OkObjectResult, writing value of type 'HakatonApi.Models.CourseDtos.CourseView'.
+2022-12-18 02:03:08.119 +05:00 [INF] Executed action HakatonApi.Controllers.CourseController.GetCourseById (HakatonApi) in 10136.2621ms
+2022-12-18 02:03:08.151 +05:00 [INF] Executed endpoint 'HakatonApi.Controllers.CourseController.GetCourseById (HakatonApi)'
+2022-12-18 02:03:08.157 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7251/Api.Course/e5d4bd47-14d8-4865-ab46-3f62e3c70d02 - - - 200 - application/json;+charset=utf-8 10221.3444ms
+2022-12-18 02:03:57.587 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7251/Api.Course/e5d4bd47-14d8-4865-ab46-3f62e3c70d02 - -
+2022-12-18 02:03:57.609 +05:00 [INF] Executing endpoint 'HakatonApi.Controllers.CourseController.GetCourseById (HakatonApi)'
+2022-12-18 02:03:57.612 +05:00 [INF] Route matched with {action = "GetCourseById", controller = "Course"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCourseById(System.Guid) on controller HakatonApi.Controllers.CourseController (HakatonApi).
+2022-12-18 02:04:02.642 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: None
+2022-12-18 02:04:02.657 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."CourseName", c."Key"
+FROM "Courses" AS c
+WHERE c."Id" = @__get_Item_0
+LIMIT 1
+2022-12-18 02:04:02.670 +05:00 [INF] Executing OkObjectResult, writing value of type 'HakatonApi.Models.CourseDtos.CourseView'.
+2022-12-18 02:04:02.673 +05:00 [INF] Executed action HakatonApi.Controllers.CourseController.GetCourseById (HakatonApi) in 5055.7656ms
+2022-12-18 02:04:02.676 +05:00 [INF] Executed endpoint 'HakatonApi.Controllers.CourseController.GetCourseById (HakatonApi)'
+2022-12-18 02:04:02.682 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7251/Api.Course/e5d4bd47-14d8-4865-ab46-3f62e3c70d02 - - - 200 - application/json;+charset=utf-8 5094.8304ms
+2022-12-18 02:04:09.517 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7251/Api.Course/all - -
+2022-12-18 02:04:09.520 +05:00 [INF] Executing endpoint 'HakatonApi.Controllers.CourseController.GetCourses (HakatonApi)'
+2022-12-18 02:04:09.530 +05:00 [INF] Route matched with {action = "GetCourses", controller = "Course"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCourses() on controller HakatonApi.Controllers.CourseController (HakatonApi).
+2022-12-18 02:04:09.545 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: None
+2022-12-18 02:04:09.603 +05:00 [INF] Executed DbCommand (36ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."CourseName", c."Key"
+FROM "Courses" AS c
+2022-12-18 02:04:09.613 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HakatonApi.Models.CourseDtos.CourseView, HakatonApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-12-18 02:04:09.618 +05:00 [INF] Executed action HakatonApi.Controllers.CourseController.GetCourses (HakatonApi) in 81.3074ms
+2022-12-18 02:04:09.623 +05:00 [INF] Executed endpoint 'HakatonApi.Controllers.CourseController.GetCourses (HakatonApi)'
+2022-12-18 02:04:09.626 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7251/Api.Course/all - - - 200 - application/json;+charset=utf-8 109.5209ms
+2022-12-18 02:04:30.321 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7251/Api.Course/join?courseId=e5d4bd47-14d8-4865-ab46-3f62e3c70d02 - -
+2022-12-18 02:04:30.327 +05:00 [INF] Executing endpoint 'HakatonApi.Controllers.CourseController.JoinToCourse (HakatonApi)'
+2022-12-18 02:04:30.333 +05:00 [INF] Route matched with {action = "JoinToCourse", controller = "Course"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] JoinToCourse(System.Guid) on controller HakatonApi.Controllers.CourseController (HakatonApi).
+2022-12-18 02:04:30.389 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: None
+2022-12-18 02:04:30.408 +05:00 [INF] Executed DbCommand (9ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."AvatarUrl", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."Password", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."Id" = @__get_Item_0
+LIMIT 1
+2022-12-18 02:04:30.458 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."CourseName", c."Key"
+FROM "Courses" AS c
+WHERE c."Id" = @__get_Item_0
+LIMIT 1
+2022-12-18 02:04:30.488 +05:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2022-12-18 02:04:30.491 +05:00 [INF] Executed action HakatonApi.Controllers.CourseController.JoinToCourse (HakatonApi) in 150.5492ms
+2022-12-18 02:04:30.498 +05:00 [INF] Executed endpoint 'HakatonApi.Controllers.CourseController.JoinToCourse (HakatonApi)'
+2022-12-18 02:04:30.501 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7251/Api.Course/join?courseId=e5d4bd47-14d8-4865-ab46-3f62e3c70d02 - - - 200 0 - 179.8695ms
+2022-12-18 03:13:39.612 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: using lazy loading proxies 
+2022-12-18 03:14:15.549 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: using lazy loading proxies 
+2022-12-18 03:14:16.507 +05:00 [INF] Executed DbCommand (133ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2022-12-18 03:14:16.585 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2022-12-18 03:14:42.796 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: using lazy loading proxies 
+2022-12-18 03:15:21.980 +05:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-12-18 03:15:22.944 +05:00 [INF] Now listening on: https://localhost:7251
+2022-12-18 03:15:22.952 +05:00 [INF] Now listening on: http://localhost:5251
+2022-12-18 03:15:22.975 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-18 03:15:22.979 +05:00 [INF] Hosting environment: Development
+2022-12-18 03:15:22.986 +05:00 [INF] Content root path: D:\Hakaton\Hakaton.Api\
+2022-12-18 03:15:46.501 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: using lazy loading proxies 
+2022-12-18 03:15:47.408 +05:00 [INF] Executed DbCommand (124ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2022-12-18 03:15:47.437 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2022-12-18 03:15:57.787 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: using lazy loading proxies 
+2022-12-18 03:16:45.377 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: using lazy loading proxies 
+2022-12-18 03:16:46.401 +05:00 [INF] Executed DbCommand (152ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2022-12-18 03:16:46.442 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2022-12-18 03:16:54.161 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: using lazy loading proxies 
+2022-12-18 03:17:31.312 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: using lazy loading proxies 
+2022-12-18 03:17:32.013 +05:00 [INF] Executed DbCommand (131ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2022-12-18 03:17:32.141 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2022-12-18 03:17:32.167 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2022-12-18 03:17:32.211 +05:00 [INF] Applying migration '20221217221654_newinit'.
+2022-12-18 03:17:32.433 +05:00 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DROP TABLE "UserCourses";
+2022-12-18 03:17:32.463 +05:00 [INF] Executed DbCommand (29ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "CourseUsers" (
+    "Id" uuid NOT NULL,
+    "IsAdmin" boolean NOT NULL,
+    "UserId" uuid NOT NULL,
+    "CourseId" uuid NOT NULL,
+    CONSTRAINT "PK_CourseUsers" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_CourseUsers_AspNetUsers_UserId" FOREIGN KEY ("UserId") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE,
+    CONSTRAINT "FK_CourseUsers_Courses_CourseId" FOREIGN KEY ("CourseId") REFERENCES "Courses" ("Id") ON DELETE CASCADE
+);
+2022-12-18 03:17:32.470 +05:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_CourseUsers_CourseId" ON "CourseUsers" ("CourseId");
+2022-12-18 03:17:32.473 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_CourseUsers_UserId" ON "CourseUsers" ("UserId");
+2022-12-18 03:17:32.475 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20221217221654_newinit', '6.0.11');
+2022-12-18 03:18:02.719 +05:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-12-18 03:18:03.398 +05:00 [INF] Now listening on: https://localhost:7251
+2022-12-18 03:18:03.410 +05:00 [INF] Now listening on: http://localhost:5251
+2022-12-18 03:18:03.441 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-18 03:18:03.451 +05:00 [INF] Hosting environment: Development
+2022-12-18 03:18:03.457 +05:00 [INF] Content root path: D:\Hakaton\Hakaton.Api\
+2022-12-18 03:18:04.945 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7251/swagger/index.html - -
+2022-12-18 03:18:06.191 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7251/_framework/aspnetcore-browser-refresh.js - -
+2022-12-18 03:18:06.193 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7251/_vs/browserLink - -
+2022-12-18 03:18:06.222 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7251/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 29.6307ms
+2022-12-18 03:18:06.227 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7251/swagger/index.html - - - 200 - text/html;charset=utf-8 1300.6451ms
+2022-12-18 03:18:06.454 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7251/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 261.4263ms
+2022-12-18 03:18:06.649 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7251/swagger/v1/swagger.json - -
+2022-12-18 03:18:07.263 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7251/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 614.4641ms
+2022-12-18 03:18:18.036 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7251/swagger/index.html - -
+2022-12-18 03:18:18.120 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7251/swagger/index.html - - - 200 - text/html;charset=utf-8 87.0320ms
+2022-12-18 03:18:18.153 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7251/_vs/browserLink - -
+2022-12-18 03:18:18.176 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7251/_framework/aspnetcore-browser-refresh.js - -
+2022-12-18 03:18:18.225 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7251/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 72.6901ms
+2022-12-18 03:18:18.230 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7251/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 53.1774ms
+2022-12-18 03:18:18.448 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7251/swagger/v1/swagger.json - -
+2022-12-18 03:18:18.466 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7251/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 18.2284ms
+2022-12-18 03:18:42.323 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7251/api/Account/signup multipart/form-data;+boundary=----WebKitFormBoundaryCc5A1ViA0MXlrdZf 743
+2022-12-18 03:18:48.877 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: using lazy loading proxies 
+2022-12-18 03:18:52.331 +05:00 [INF] Executed DbCommand (251ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."AvatarUrl", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."Password", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."Id" = @__get_Item_0
+LIMIT 1
+2022-12-18 03:18:53.090 +05:00 [INF] Executed DbCommand (18ms) [Parameters=[@__user_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ClaimType", a."ClaimValue", a."UserId"
+FROM "AspNetUserClaims" AS a
+WHERE a."UserId" = @__user_Id_0
+2022-12-18 03:18:53.267 +05:00 [INF] Executed DbCommand (44ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT a0."Name"
+FROM "AspNetUserRoles" AS a
+INNER JOIN "AspNetRoles" AS a0 ON a."RoleId" = a0."Id"
+WHERE a."UserId" = @__userId_0
+2022-12-18 03:18:53.322 +05:00 [INF] Executing endpoint 'Hakaton.Api.Controller.AccountController.SignUp (HakatonApi)'
+2022-12-18 03:18:53.401 +05:00 [INF] Route matched with {action = "SignUp", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignUp(Hakaton.Api.Models.SignUpUserDto) on controller Hakaton.Api.Controller.AccountController (HakatonApi).
+2022-12-18 03:18:54.286 +05:00 [INF] Executed DbCommand (22ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."AvatarUrl", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."Password", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2022-12-18 03:18:55.102 +05:00 [INF] Executed DbCommand (61ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Int32), @p2='?', @p3='?', @p4='?', @p5='?' (DbType = Boolean), @p6='?', @p7='?', @p8='?' (DbType = Boolean), @p9='?' (DbType = DateTime), @p10='?', @p11='?', @p12='?', @p13='?', @p14='?', @p15='?' (DbType = Boolean), @p16='?', @p17='?' (DbType = Boolean), @p18='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "AspNetUsers" ("Id", "AccessFailedCount", "AvatarUrl", "ConcurrencyStamp", "Email", "EmailConfirmed", "FirstName", "LastName", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "Password", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18);
+2022-12-18 03:18:55.325 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__user_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ClaimType", a."ClaimValue", a."UserId"
+FROM "AspNetUserClaims" AS a
+WHERE a."UserId" = @__user_Id_0
+2022-12-18 03:18:55.347 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT a0."Name"
+FROM "AspNetUserRoles" AS a
+INNER JOIN "AspNetRoles" AS a0 ON a."RoleId" = a0."Id"
+WHERE a."UserId" = @__userId_0
+2022-12-18 03:18:55.374 +05:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2022-12-18 03:18:55.411 +05:00 [INF] Executing OkObjectResult, writing value of type 'HakatonApi.Entities.User'.
+2022-12-18 03:18:55.519 +05:00 [INF] Executed action Hakaton.Api.Controller.AccountController.SignUp (HakatonApi) in 2075.5914ms
+2022-12-18 03:18:55.528 +05:00 [INF] Executed endpoint 'Hakaton.Api.Controller.AccountController.SignUp (HakatonApi)'
+2022-12-18 03:18:55.570 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7251/api/Account/signup multipart/form-data;+boundary=----WebKitFormBoundaryCc5A1ViA0MXlrdZf 743 - 200 - application/json;+charset=utf-8 13247.6361ms
+2022-12-18 03:20:06.641 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7251/api/Account/signup multipart/form-data;+boundary=----WebKitFormBoundaryvLxBCd94mfs872oo 743
+2022-12-18 03:20:06.657 +05:00 [INF] Executing endpoint 'Hakaton.Api.Controller.AccountController.SignUp (HakatonApi)'
+2022-12-18 03:20:06.661 +05:00 [INF] Route matched with {action = "SignUp", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignUp(Hakaton.Api.Models.SignUpUserDto) on controller Hakaton.Api.Controller.AccountController (HakatonApi).
+2022-12-18 03:20:06.862 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: using lazy loading proxies 
+2022-12-18 03:20:06.880 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."AvatarUrl", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."Password", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2022-12-18 03:20:06.958 +05:00 [WRN] User validation failed: DuplicateUserName.
+2022-12-18 03:20:06.965 +05:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-12-18 03:20:06.973 +05:00 [INF] Executed action Hakaton.Api.Controller.AccountController.SignUp (HakatonApi) in 305.7597ms
+2022-12-18 03:20:06.976 +05:00 [INF] Executed endpoint 'Hakaton.Api.Controller.AccountController.SignUp (HakatonApi)'
+2022-12-18 03:20:06.980 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7251/api/Account/signup multipart/form-data;+boundary=----WebKitFormBoundaryvLxBCd94mfs872oo 743 - 400 - application/problem+json;+charset=utf-8 339.2339ms
+2022-12-18 03:20:26.190 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7251/api/Account/signup multipart/form-data;+boundary=----WebKitFormBoundaryVyqAuTwkdbhHkaW9 749
+2022-12-18 03:20:26.245 +05:00 [INF] Executing endpoint 'Hakaton.Api.Controller.AccountController.SignUp (HakatonApi)'
+2022-12-18 03:20:26.249 +05:00 [INF] Route matched with {action = "SignUp", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignUp(Hakaton.Api.Models.SignUpUserDto) on controller Hakaton.Api.Controller.AccountController (HakatonApi).
+2022-12-18 03:20:26.299 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: using lazy loading proxies 
+2022-12-18 03:20:26.315 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."AvatarUrl", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."Password", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2022-12-18 03:20:26.334 +05:00 [WRN] User validation failed: DuplicateUserName.
+2022-12-18 03:20:26.337 +05:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-12-18 03:20:26.340 +05:00 [INF] Executed action Hakaton.Api.Controller.AccountController.SignUp (HakatonApi) in 82.3677ms
+2022-12-18 03:20:26.343 +05:00 [INF] Executed endpoint 'Hakaton.Api.Controller.AccountController.SignUp (HakatonApi)'
+2022-12-18 03:20:26.347 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7251/api/Account/signup multipart/form-data;+boundary=----WebKitFormBoundaryVyqAuTwkdbhHkaW9 749 - 400 - application/problem+json;+charset=utf-8 156.1989ms
+2022-12-18 03:23:13.574 +05:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-12-18 03:23:14.242 +05:00 [INF] Now listening on: https://localhost:7251
+2022-12-18 03:23:14.248 +05:00 [INF] Now listening on: http://localhost:5251
+2022-12-18 03:23:14.273 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-18 03:23:14.278 +05:00 [INF] Hosting environment: Development
+2022-12-18 03:23:14.290 +05:00 [INF] Content root path: D:\Hakaton\Hakaton.Api\
+2022-12-18 03:23:15.783 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7251/swagger/index.html - -
+2022-12-18 03:23:17.957 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7251/swagger/index.html - - - 200 - text/html;charset=utf-8 2182.8374ms
+2022-12-18 03:23:17.973 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7251/_vs/browserLink - -
+2022-12-18 03:23:17.973 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7251/_framework/aspnetcore-browser-refresh.js - -
+2022-12-18 03:23:18.194 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7251/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 220.0466ms
+2022-12-18 03:23:18.299 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7251/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 326.0655ms
+2022-12-18 03:23:18.493 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7251/swagger/v1/swagger.json - -
+2022-12-18 03:23:19.114 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7251/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 620.5805ms
+2022-12-18 03:24:01.859 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7251/api/Account/signup multipart/form-data;+boundary=----WebKitFormBoundarynnBSQ4b7BD3Zu9N9 751
+2022-12-18 03:24:02.855 +05:00 [INF] Executing endpoint 'Hakaton.Api.Controller.AccountController.SignUp (HakatonApi)'
+2022-12-18 03:24:02.955 +05:00 [INF] Route matched with {action = "SignUp", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignUp(Hakaton.Api.Models.SignUpUserDto) on controller Hakaton.Api.Controller.AccountController (HakatonApi).
+2022-12-18 03:24:09.539 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: using lazy loading proxies 
+2022-12-18 03:24:12.931 +05:00 [INF] Executed DbCommand (317ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."AvatarUrl", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."Password", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2022-12-18 03:24:14.113 +05:00 [INF] Executed DbCommand (55ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Int32), @p2='?', @p3='?', @p4='?', @p5='?' (DbType = Boolean), @p6='?', @p7='?', @p8='?' (DbType = Boolean), @p9='?' (DbType = DateTime), @p10='?', @p11='?', @p12='?', @p13='?', @p14='?', @p15='?' (DbType = Boolean), @p16='?', @p17='?' (DbType = Boolean), @p18='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "AspNetUsers" ("Id", "AccessFailedCount", "AvatarUrl", "ConcurrencyStamp", "Email", "EmailConfirmed", "FirstName", "LastName", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "Password", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18);
+2022-12-18 03:24:22.406 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__user_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ClaimType", a."ClaimValue", a."UserId"
+FROM "AspNetUserClaims" AS a
+WHERE a."UserId" = @__user_Id_0
+2022-12-18 03:24:22.596 +05:00 [INF] Executed DbCommand (6ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT a0."Name"
+FROM "AspNetUserRoles" AS a
+INNER JOIN "AspNetRoles" AS a0 ON a."RoleId" = a0."Id"
+WHERE a."UserId" = @__userId_0
+2022-12-18 03:24:22.631 +05:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2022-12-18 03:24:24.630 +05:00 [INF] Executing OkObjectResult, writing value of type 'HakatonApi.Entities.User'.
+2022-12-18 03:24:28.213 +05:00 [INF] Executed action Hakaton.Api.Controller.AccountController.SignUp (HakatonApi) in 25209.0249ms
+2022-12-18 03:24:28.246 +05:00 [INF] Executed endpoint 'Hakaton.Api.Controller.AccountController.SignUp (HakatonApi)'
+2022-12-18 03:24:28.304 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7251/api/Account/signup multipart/form-data;+boundary=----WebKitFormBoundarynnBSQ4b7BD3Zu9N9 751 - 200 - application/json;+charset=utf-8 26449.7800ms
+2022-12-18 03:24:41.387 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7251/Api.Course?CourseName=yana - 0
+2022-12-18 03:24:41.436 +05:00 [INF] Executing endpoint 'HakatonApi.Controllers.CourseController.CreateCourse (HakatonApi)'
+2022-12-18 03:24:41.495 +05:00 [INF] Route matched with {action = "CreateCourse", controller = "Course"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateCourse(HakatonApi.Models.CourseDtos.GetCourseDto) on controller HakatonApi.Controllers.CourseController (HakatonApi).
+2022-12-18 03:24:41.704 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: using lazy loading proxies 
+2022-12-18 03:24:41.754 +05:00 [INF] Executed DbCommand (8ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."AvatarUrl", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."Password", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."Id" = @__get_Item_0
+LIMIT 1
+2022-12-18 03:24:42.127 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?', @p2='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Courses" ("Id", "CourseName", "Key")
+VALUES (@p0, @p1, @p2);
+2022-12-18 03:24:42.186 +05:00 [INF] Executed DbCommand (42ms) [Parameters=[@p3='?' (DbType = Guid), @p4='?' (DbType = Guid), @p5='?' (DbType = Boolean), @p6='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "CourseUsers" ("Id", "CourseId", "IsAdmin", "UserId")
+VALUES (@p3, @p4, @p5, @p6);
+2022-12-18 03:24:42.217 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Guid'.
+2022-12-18 03:24:42.227 +05:00 [INF] Executed action HakatonApi.Controllers.CourseController.CreateCourse (HakatonApi) in 718.4048ms
+2022-12-18 03:24:42.233 +05:00 [INF] Executed endpoint 'HakatonApi.Controllers.CourseController.CreateCourse (HakatonApi)'
+2022-12-18 03:24:42.244 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7251/Api.Course?CourseName=yana - 0 - 200 - application/json;+charset=utf-8 857.0280ms
+2022-12-18 03:27:53.687 +05:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-12-18 03:27:54.394 +05:00 [INF] Now listening on: https://localhost:7251
+2022-12-18 03:27:54.402 +05:00 [INF] Now listening on: http://localhost:5251
+2022-12-18 03:27:54.427 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-18 03:27:54.434 +05:00 [INF] Hosting environment: Development
+2022-12-18 03:27:54.439 +05:00 [INF] Content root path: D:\Hakaton\Hakaton.Api\
+2022-12-18 03:27:56.086 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7251/swagger/index.html - -
+2022-12-18 03:27:56.931 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7251/_framework/aspnetcore-browser-refresh.js - -
+2022-12-18 03:27:56.939 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7251/_vs/browserLink - -
+2022-12-18 03:27:56.955 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7251/swagger/index.html - - - 200 - text/html;charset=utf-8 885.9500ms
+2022-12-18 03:27:56.956 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7251/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 24.5236ms
+2022-12-18 03:27:57.076 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7251/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 136.7726ms
+2022-12-18 03:27:57.280 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7251/swagger/v1/swagger.json - -
+2022-12-18 03:27:57.804 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7251/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 524.1833ms
+2022-12-18 03:28:27.025 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7251/api/Account/signup multipart/form-data;+boundary=----WebKitFormBoundaryeopfsJw5ivtKycvF 748
+2022-12-18 03:28:27.765 +05:00 [INF] Executing endpoint 'Hakaton.Api.Controller.AccountController.SignUp (HakatonApi)'
+2022-12-18 03:28:27.835 +05:00 [INF] Route matched with {action = "SignUp", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignUp(Hakaton.Api.Models.SignUpUserDto) on controller Hakaton.Api.Controller.AccountController (HakatonApi).
+2022-12-18 03:28:33.438 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: using lazy loading proxies 
+2022-12-18 03:28:37.028 +05:00 [INF] Executed DbCommand (356ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."AvatarUrl", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."Password", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2022-12-18 03:28:38.174 +05:00 [INF] Executed DbCommand (51ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Int32), @p2='?', @p3='?', @p4='?', @p5='?' (DbType = Boolean), @p6='?', @p7='?', @p8='?' (DbType = Boolean), @p9='?' (DbType = DateTime), @p10='?', @p11='?', @p12='?', @p13='?', @p14='?', @p15='?' (DbType = Boolean), @p16='?', @p17='?' (DbType = Boolean), @p18='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "AspNetUsers" ("Id", "AccessFailedCount", "AvatarUrl", "ConcurrencyStamp", "Email", "EmailConfirmed", "FirstName", "LastName", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "Password", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18);
+2022-12-18 03:28:43.471 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__user_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ClaimType", a."ClaimValue", a."UserId"
+FROM "AspNetUserClaims" AS a
+WHERE a."UserId" = @__user_Id_0
+2022-12-18 03:28:43.627 +05:00 [INF] Executed DbCommand (6ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT a0."Name"
+FROM "AspNetUserRoles" AS a
+INNER JOIN "AspNetRoles" AS a0 ON a."RoleId" = a0."Id"
+WHERE a."UserId" = @__userId_0
+2022-12-18 03:28:43.671 +05:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2022-12-18 03:28:43.710 +05:00 [INF] Executing OkObjectResult, writing value of type 'HakatonApi.Entities.User'.
+2022-12-18 03:28:43.760 +05:00 [INF] Executed action Hakaton.Api.Controller.AccountController.SignUp (HakatonApi) in 15904.2913ms
+2022-12-18 03:28:43.767 +05:00 [INF] Executed endpoint 'Hakaton.Api.Controller.AccountController.SignUp (HakatonApi)'
+2022-12-18 03:28:43.809 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7251/api/Account/signup multipart/form-data;+boundary=----WebKitFormBoundaryeopfsJw5ivtKycvF 748 - 200 - application/json;+charset=utf-8 16783.7252ms
+2022-12-18 03:29:00.596 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7251/Api.Course multipart/form-data;+boundary=----WebKitFormBoundaryZanVmZ2JM94L5Qxb 147
+2022-12-18 03:29:00.657 +05:00 [INF] Executing endpoint 'HakatonApi.Controllers.CourseController.CreateCourse (HakatonApi)'
+2022-12-18 03:29:00.681 +05:00 [INF] Route matched with {action = "CreateCourse", controller = "Course"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateCourse(HakatonApi.Models.CourseDtos.GetCourseDto) on controller HakatonApi.Controllers.CourseController (HakatonApi).
+2022-12-18 03:29:00.827 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: using lazy loading proxies 
+2022-12-18 03:29:00.916 +05:00 [INF] Executed DbCommand (26ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."AvatarUrl", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."Password", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."Id" = @__get_Item_0
+LIMIT 1
+2022-12-18 03:29:01.301 +05:00 [INF] Executed DbCommand (9ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?', @p2='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Courses" ("Id", "CourseName", "Key")
+VALUES (@p0, @p1, @p2);
+2022-12-18 03:29:01.317 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[@p3='?' (DbType = Guid), @p4='?' (DbType = Guid), @p5='?' (DbType = Boolean), @p6='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "CourseUsers" ("Id", "CourseId", "IsAdmin", "UserId")
+VALUES (@p3, @p4, @p5, @p6);
+2022-12-18 03:29:01.377 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Guid'.
+2022-12-18 03:29:01.385 +05:00 [INF] Executed action HakatonApi.Controllers.CourseController.CreateCourse (HakatonApi) in 681.3302ms
+2022-12-18 03:29:01.389 +05:00 [INF] Executed endpoint 'HakatonApi.Controllers.CourseController.CreateCourse (HakatonApi)'
+2022-12-18 03:29:01.395 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7251/Api.Course multipart/form-data;+boundary=----WebKitFormBoundaryZanVmZ2JM94L5Qxb 147 - 200 - application/json;+charset=utf-8 799.5748ms
+2022-12-18 03:29:29.827 +05:00 [INF] Request starting HTTP/2 PUT https://localhost:7251/Api.Course multipart/form-data;+boundary=----WebKitFormBoundaryCBHQCxRD2g580rAG 279
+2022-12-18 03:29:29.870 +05:00 [INF] Executing endpoint 'HakatonApi.Controllers.CourseController.UpdateCourse (HakatonApi)'
+2022-12-18 03:29:29.885 +05:00 [INF] Route matched with {action = "UpdateCourse", controller = "Course"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateCourse(HakatonApi.Models.CourseDtos.UpdateCourseDto) on controller HakatonApi.Controllers.CourseController (HakatonApi).
+2022-12-18 03:29:29.934 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: using lazy loading proxies 
+2022-12-18 03:29:29.970 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."AvatarUrl", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."Password", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."Id" = @__get_Item_0
+LIMIT 1
+2022-12-18 03:29:30.081 +05:00 [INF] Executed DbCommand (13ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."CourseName", c."Key"
+FROM "Courses" AS c
+WHERE c."Id" = @__get_Item_0
+LIMIT 1
+2022-12-18 03:29:30.145 +05:00 [INF] Executed DbCommand (12ms) [Parameters=[@p1='?' (DbType = Guid), @p0='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Courses" SET "CourseName" = @p0
+WHERE "Id" = @p1;
+2022-12-18 03:29:30.179 +05:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2022-12-18 03:29:30.191 +05:00 [INF] Executed action HakatonApi.Controllers.CourseController.UpdateCourse (HakatonApi) in 298.3891ms
+2022-12-18 03:29:30.197 +05:00 [INF] Executed endpoint 'HakatonApi.Controllers.CourseController.UpdateCourse (HakatonApi)'
+2022-12-18 03:29:30.202 +05:00 [INF] Request finished HTTP/2 PUT https://localhost:7251/Api.Course multipart/form-data;+boundary=----WebKitFormBoundaryCBHQCxRD2g580rAG 279 - 200 0 - 375.3783ms
+2022-12-18 03:30:00.076 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7251/Api.Course/all - -
+2022-12-18 03:30:00.086 +05:00 [INF] Executing endpoint 'HakatonApi.Controllers.CourseController.GetCourses (HakatonApi)'
+2022-12-18 03:30:00.095 +05:00 [INF] Route matched with {action = "GetCourses", controller = "Course"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCourses() on controller HakatonApi.Controllers.CourseController (HakatonApi).
+2022-12-18 03:30:00.114 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: using lazy loading proxies 
+2022-12-18 03:30:00.144 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."CourseName", c."Key"
+FROM "Courses" AS c
+2022-12-18 03:30:00.200 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HakatonApi.Models.CourseDtos.CourseView, HakatonApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-12-18 03:30:00.211 +05:00 [INF] Executed action HakatonApi.Controllers.CourseController.GetCourses (HakatonApi) in 109.2319ms
+2022-12-18 03:30:00.216 +05:00 [INF] Executed endpoint 'HakatonApi.Controllers.CourseController.GetCourses (HakatonApi)'
+2022-12-18 03:30:00.222 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7251/Api.Course/all - - - 200 - application/json;+charset=utf-8 145.7698ms
+2022-12-18 03:30:38.306 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7251/Api.Course/members?courseId=5707c3e9-5de9-4507-8fb8-fbb86c7a2936 - -
+2022-12-18 03:30:38.324 +05:00 [INF] Executing endpoint 'HakatonApi.Controllers.CourseController.GetCourseMembers (HakatonApi)'
+2022-12-18 03:30:38.335 +05:00 [INF] Route matched with {action = "GetCourseMembers", controller = "Course"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCourseMembers(System.Guid) on controller HakatonApi.Controllers.CourseController (HakatonApi).
+2022-12-18 03:30:38.365 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: using lazy loading proxies 
+2022-12-18 03:30:38.391 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."CourseName", c."Key"
+FROM "Courses" AS c
+WHERE c."Id" = @__get_Item_0
+LIMIT 1
+2022-12-18 03:30:38.539 +05:00 [INF] Executed DbCommand (41ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."CourseId", c."IsAdmin", c."UserId"
+FROM "CourseUsers" AS c
+WHERE c."CourseId" = @__get_Item_0
+2022-12-18 03:30:38.577 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."AvatarUrl", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."Password", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."Id" = @__get_Item_0
+2022-12-18 03:30:38.605 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HakatonApi.Entities.User, HakatonApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-12-18 03:30:38.653 +05:00 [INF] Executed DbCommand (7ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT r."Id", r."CompletedTime", r."FilePath", r."ResultStatus", r."StudentComment", r."TaskId", r."TeacherComment", r."UserId"
+FROM "Results" AS r
+WHERE r."UserId" = @__get_Item_0
+2022-12-18 03:30:38.693 +05:00 [INF] Executed action HakatonApi.Controllers.CourseController.GetCourseMembers (HakatonApi) in 352.764ms
+2022-12-18 03:30:38.708 +05:00 [INF] Executed endpoint 'HakatonApi.Controllers.CourseController.GetCourseMembers (HakatonApi)'
+2022-12-18 03:30:38.713 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7251/Api.Course/members?courseId=5707c3e9-5de9-4507-8fb8-fbb86c7a2936 - - - 200 - application/json;+charset=utf-8 407.4539ms
+2022-12-18 03:31:28.017 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7251/Api.Course/all - -
+2022-12-18 03:31:28.020 +05:00 [INF] Executing endpoint 'HakatonApi.Controllers.CourseController.GetCourses (HakatonApi)'
+2022-12-18 03:31:28.023 +05:00 [INF] Route matched with {action = "GetCourses", controller = "Course"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCourses() on controller HakatonApi.Controllers.CourseController (HakatonApi).
+2022-12-18 03:31:28.034 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: using lazy loading proxies 
+2022-12-18 03:31:28.050 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."CourseName", c."Key"
+FROM "Courses" AS c
+2022-12-18 03:31:28.058 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HakatonApi.Models.CourseDtos.CourseView, HakatonApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-12-18 03:31:28.062 +05:00 [INF] Executed action HakatonApi.Controllers.CourseController.GetCourses (HakatonApi) in 32.928ms
+2022-12-18 03:31:28.065 +05:00 [INF] Executed endpoint 'HakatonApi.Controllers.CourseController.GetCourses (HakatonApi)'
+2022-12-18 03:31:28.068 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7251/Api.Course/all - - - 200 - application/json;+charset=utf-8 51.5083ms
+2022-12-18 03:31:38.986 +05:00 [INF] Request starting HTTP/2 PUT https://localhost:7251/Api.Course multipart/form-data;+boundary=----WebKitFormBoundaryJ7tMEzjQVs4KMBOI 281
+2022-12-18 03:31:38.990 +05:00 [INF] Executing endpoint 'HakatonApi.Controllers.CourseController.UpdateCourse (HakatonApi)'
+2022-12-18 03:31:38.992 +05:00 [INF] Route matched with {action = "UpdateCourse", controller = "Course"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateCourse(HakatonApi.Models.CourseDtos.UpdateCourseDto) on controller HakatonApi.Controllers.CourseController (HakatonApi).
+2022-12-18 03:31:39.005 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: using lazy loading proxies 
+2022-12-18 03:31:39.021 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."AvatarUrl", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."Password", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."Id" = @__get_Item_0
+LIMIT 1
+2022-12-18 03:31:39.039 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."CourseName", c."Key"
+FROM "Courses" AS c
+WHERE c."Id" = @__get_Item_0
+LIMIT 1
+2022-12-18 03:31:39.059 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@p1='?' (DbType = Guid), @p0='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Courses" SET "CourseName" = @p0
+WHERE "Id" = @p1;
+2022-12-18 03:31:39.104 +05:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2022-12-18 03:31:39.140 +05:00 [INF] Executed action HakatonApi.Controllers.CourseController.UpdateCourse (HakatonApi) in 140.3334ms
+2022-12-18 03:31:39.143 +05:00 [INF] Executed endpoint 'HakatonApi.Controllers.CourseController.UpdateCourse (HakatonApi)'
+2022-12-18 03:31:39.146 +05:00 [INF] Request finished HTTP/2 PUT https://localhost:7251/Api.Course multipart/form-data;+boundary=----WebKitFormBoundaryJ7tMEzjQVs4KMBOI 281 - 200 0 - 164.2502ms
+2022-12-18 03:31:45.575 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7251/Api.Course/all - -
+2022-12-18 03:31:45.578 +05:00 [INF] Executing endpoint 'HakatonApi.Controllers.CourseController.GetCourses (HakatonApi)'
+2022-12-18 03:31:45.580 +05:00 [INF] Route matched with {action = "GetCourses", controller = "Course"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCourses() on controller HakatonApi.Controllers.CourseController (HakatonApi).
+2022-12-18 03:31:45.590 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: using lazy loading proxies 
+2022-12-18 03:31:45.599 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."CourseName", c."Key"
+FROM "Courses" AS c
+2022-12-18 03:31:45.607 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HakatonApi.Models.CourseDtos.CourseView, HakatonApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-12-18 03:31:45.610 +05:00 [INF] Executed action HakatonApi.Controllers.CourseController.GetCourses (HakatonApi) in 24.0332ms
+2022-12-18 03:31:45.613 +05:00 [INF] Executed endpoint 'HakatonApi.Controllers.CourseController.GetCourses (HakatonApi)'
+2022-12-18 03:31:45.617 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7251/Api.Course/all - - - 200 - application/json;+charset=utf-8 40.4175ms
+2022-12-18 03:32:11.802 +05:00 [INF] Request starting HTTP/2 DELETE https://localhost:7251/Api.Course?courseId=5707c3e9-5de9-4507-8fb8-fbb86c7a2936 - -
+2022-12-18 03:32:11.807 +05:00 [INF] Executing endpoint 'HakatonApi.Controllers.CourseController.DeleteCourse (HakatonApi)'
+2022-12-18 03:32:11.817 +05:00 [INF] Route matched with {action = "DeleteCourse", controller = "Course"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteCourse(System.Guid) on controller HakatonApi.Controllers.CourseController (HakatonApi).
+2022-12-18 03:32:11.830 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: using lazy loading proxies 
+2022-12-18 03:32:11.841 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."CourseName", c."Key"
+FROM "Courses" AS c
+WHERE c."Id" = @__get_Item_0
+LIMIT 1
+2022-12-18 03:32:11.891 +05:00 [INF] Executed DbCommand (9ms) [Parameters=[@p0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "Courses"
+WHERE "Id" = @p0;
+2022-12-18 03:32:11.921 +05:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2022-12-18 03:32:11.926 +05:00 [INF] Executed action HakatonApi.Controllers.CourseController.DeleteCourse (HakatonApi) in 103.5557ms
+2022-12-18 03:32:11.937 +05:00 [INF] Executed endpoint 'HakatonApi.Controllers.CourseController.DeleteCourse (HakatonApi)'
+2022-12-18 03:32:11.943 +05:00 [INF] Request finished HTTP/2 DELETE https://localhost:7251/Api.Course?courseId=5707c3e9-5de9-4507-8fb8-fbb86c7a2936 - - - 200 0 - 140.7257ms
+2022-12-18 03:32:18.546 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7251/Api.Course/all - -
+2022-12-18 03:32:18.550 +05:00 [INF] Executing endpoint 'HakatonApi.Controllers.CourseController.GetCourses (HakatonApi)'
+2022-12-18 03:32:18.554 +05:00 [INF] Route matched with {action = "GetCourses", controller = "Course"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCourses() on controller HakatonApi.Controllers.CourseController (HakatonApi).
+2022-12-18 03:32:18.562 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: using lazy loading proxies 
+2022-12-18 03:32:18.579 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."CourseName", c."Key"
+FROM "Courses" AS c
+2022-12-18 03:32:18.587 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HakatonApi.Models.CourseDtos.CourseView, HakatonApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-12-18 03:32:18.591 +05:00 [INF] Executed action HakatonApi.Controllers.CourseController.GetCourses (HakatonApi) in 32.474ms
+2022-12-18 03:32:18.600 +05:00 [INF] Executed endpoint 'HakatonApi.Controllers.CourseController.GetCourses (HakatonApi)'
+2022-12-18 03:32:18.603 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7251/Api.Course/all - - - 200 - application/json;+charset=utf-8 56.7790ms
+2022-12-18 03:32:54.211 +05:00 [INF] Request starting HTTP/2 DELETE https://localhost:7251/Api.Course?courseId=e5d4bd47-14d8-4865-ab46-3f62e3c70d02 - -
+2022-12-18 03:32:54.232 +05:00 [INF] Executing endpoint 'HakatonApi.Controllers.CourseController.DeleteCourse (HakatonApi)'
+2022-12-18 03:32:54.235 +05:00 [INF] Route matched with {action = "DeleteCourse", controller = "Course"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteCourse(System.Guid) on controller HakatonApi.Controllers.CourseController (HakatonApi).
+2022-12-18 03:32:54.250 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: using lazy loading proxies 
+2022-12-18 03:32:54.261 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."CourseName", c."Key"
+FROM "Courses" AS c
+WHERE c."Id" = @__get_Item_0
+LIMIT 1
+2022-12-18 03:32:54.281 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "Courses"
+WHERE "Id" = @p0;
+2022-12-18 03:32:54.331 +05:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2022-12-18 03:32:54.334 +05:00 [INF] Executed action HakatonApi.Controllers.CourseController.DeleteCourse (HakatonApi) in 91.9986ms
+2022-12-18 03:32:54.336 +05:00 [INF] Executed endpoint 'HakatonApi.Controllers.CourseController.DeleteCourse (HakatonApi)'
+2022-12-18 03:32:54.340 +05:00 [INF] Request finished HTTP/2 DELETE https://localhost:7251/Api.Course?courseId=e5d4bd47-14d8-4865-ab46-3f62e3c70d02 - - - 200 0 - 129.0288ms
+2022-12-18 03:33:04.890 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7251/Api.Course/all - -
+2022-12-18 03:33:04.894 +05:00 [INF] Executing endpoint 'HakatonApi.Controllers.CourseController.GetCourses (HakatonApi)'
+2022-12-18 03:33:04.898 +05:00 [INF] Route matched with {action = "GetCourses", controller = "Course"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCourses() on controller HakatonApi.Controllers.CourseController (HakatonApi).
+2022-12-18 03:33:04.911 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: using lazy loading proxies 
+2022-12-18 03:33:04.921 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."CourseName", c."Key"
+FROM "Courses" AS c
+2022-12-18 03:33:04.928 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HakatonApi.Models.CourseDtos.CourseView, HakatonApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-12-18 03:33:04.931 +05:00 [INF] Executed action HakatonApi.Controllers.CourseController.GetCourses (HakatonApi) in 24.5268ms
+2022-12-18 03:33:04.935 +05:00 [INF] Executed endpoint 'HakatonApi.Controllers.CourseController.GetCourses (HakatonApi)'
+2022-12-18 03:33:04.939 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7251/Api.Course/all - - - 200 - application/json;+charset=utf-8 48.2842ms
+2022-12-18 03:33:38.183 +05:00 [INF] Request starting HTTP/2 PUT https://localhost:7251/Api.Course multipart/form-data;+boundary=----WebKitFormBoundaryaPS2BQ2TXjbQBmFs 281
+2022-12-18 03:33:38.186 +05:00 [INF] Executing endpoint 'HakatonApi.Controllers.CourseController.UpdateCourse (HakatonApi)'
+2022-12-18 03:33:38.188 +05:00 [INF] Route matched with {action = "UpdateCourse", controller = "Course"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateCourse(HakatonApi.Models.CourseDtos.UpdateCourseDto) on controller HakatonApi.Controllers.CourseController (HakatonApi).
+2022-12-18 03:33:38.200 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: using lazy loading proxies 
+2022-12-18 03:33:38.376 +05:00 [INF] Executed DbCommand (12ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."AvatarUrl", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."Password", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."Id" = @__get_Item_0
+LIMIT 1
+2022-12-18 03:33:38.395 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."CourseName", c."Key"
+FROM "Courses" AS c
+WHERE c."Id" = @__get_Item_0
+LIMIT 1
+2022-12-18 03:33:38.432 +05:00 [INF] Executed DbCommand (15ms) [Parameters=[@p1='?' (DbType = Guid), @p0='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Courses" SET "CourseName" = @p0
+WHERE "Id" = @p1;
+2022-12-18 03:33:38.443 +05:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2022-12-18 03:33:38.445 +05:00 [INF] Executed action HakatonApi.Controllers.CourseController.UpdateCourse (HakatonApi) in 252.7532ms
+2022-12-18 03:33:38.451 +05:00 [INF] Executed endpoint 'HakatonApi.Controllers.CourseController.UpdateCourse (HakatonApi)'
+2022-12-18 03:33:38.455 +05:00 [INF] Request finished HTTP/2 PUT https://localhost:7251/Api.Course multipart/form-data;+boundary=----WebKitFormBoundaryaPS2BQ2TXjbQBmFs 281 - 200 0 - 271.7763ms
+2022-12-18 03:33:42.279 +05:00 [INF] Request starting HTTP/2 PUT https://localhost:7251/Api.Course multipart/form-data;+boundary=----WebKitFormBoundary2ABS2l5b9bu8nnrb 281
+2022-12-18 03:33:42.284 +05:00 [INF] Executing endpoint 'HakatonApi.Controllers.CourseController.UpdateCourse (HakatonApi)'
+2022-12-18 03:33:42.286 +05:00 [INF] Route matched with {action = "UpdateCourse", controller = "Course"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateCourse(HakatonApi.Models.CourseDtos.UpdateCourseDto) on controller HakatonApi.Controllers.CourseController (HakatonApi).
+2022-12-18 03:33:42.295 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: using lazy loading proxies 
+2022-12-18 03:33:42.307 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."AvatarUrl", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."Password", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."Id" = @__get_Item_0
+LIMIT 1
+2022-12-18 03:33:42.321 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."CourseName", c."Key"
+FROM "Courses" AS c
+WHERE c."Id" = @__get_Item_0
+LIMIT 1
+2022-12-18 03:33:42.328 +05:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2022-12-18 03:33:42.332 +05:00 [INF] Executed action HakatonApi.Controllers.CourseController.UpdateCourse (HakatonApi) in 40.9916ms
+2022-12-18 03:33:42.335 +05:00 [INF] Executed endpoint 'HakatonApi.Controllers.CourseController.UpdateCourse (HakatonApi)'
+2022-12-18 03:33:42.338 +05:00 [INF] Request finished HTTP/2 PUT https://localhost:7251/Api.Course multipart/form-data;+boundary=----WebKitFormBoundary2ABS2l5b9bu8nnrb 281 - 200 0 - 59.2195ms
+2022-12-18 03:33:48.989 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7251/Api.Course/all - -
+2022-12-18 03:33:48.994 +05:00 [INF] Executing endpoint 'HakatonApi.Controllers.CourseController.GetCourses (HakatonApi)'
+2022-12-18 03:33:48.998 +05:00 [INF] Route matched with {action = "GetCourses", controller = "Course"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCourses() on controller HakatonApi.Controllers.CourseController (HakatonApi).
+2022-12-18 03:33:49.012 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: using lazy loading proxies 
+2022-12-18 03:33:49.023 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."CourseName", c."Key"
+FROM "Courses" AS c
+2022-12-18 03:33:49.029 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HakatonApi.Models.CourseDtos.CourseView, HakatonApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-12-18 03:33:49.034 +05:00 [INF] Executed action HakatonApi.Controllers.CourseController.GetCourses (HakatonApi) in 29.1271ms
+2022-12-18 03:33:49.037 +05:00 [INF] Executed endpoint 'HakatonApi.Controllers.CourseController.GetCourses (HakatonApi)'
+2022-12-18 03:33:49.041 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7251/Api.Course/all - - - 200 - application/json;+charset=utf-8 52.3708ms
+2022-12-18 03:34:14.203 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7251/Api.Course/members?courseId=2a8c7f62-b248-4e98-bcd9-b8047d961256 - -
+2022-12-18 03:34:14.219 +05:00 [INF] Executing endpoint 'HakatonApi.Controllers.CourseController.GetCourseMembers (HakatonApi)'
+2022-12-18 03:34:14.221 +05:00 [INF] Route matched with {action = "GetCourseMembers", controller = "Course"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCourseMembers(System.Guid) on controller HakatonApi.Controllers.CourseController (HakatonApi).
+2022-12-18 03:34:14.234 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: using lazy loading proxies 
+2022-12-18 03:34:14.244 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."CourseName", c."Key"
+FROM "Courses" AS c
+WHERE c."Id" = @__get_Item_0
+LIMIT 1
+2022-12-18 03:34:14.261 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."CourseId", c."IsAdmin", c."UserId"
+FROM "CourseUsers" AS c
+WHERE c."CourseId" = @__get_Item_0
+2022-12-18 03:34:14.273 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."AvatarUrl", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."Password", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."Id" = @__get_Item_0
+2022-12-18 03:34:14.284 +05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HakatonApi.Entities.User, HakatonApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-12-18 03:34:14.295 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT r."Id", r."CompletedTime", r."FilePath", r."ResultStatus", r."StudentComment", r."TaskId", r."TeacherComment", r."UserId"
+FROM "Results" AS r
+WHERE r."UserId" = @__get_Item_0
+2022-12-18 03:34:14.302 +05:00 [INF] Executed action HakatonApi.Controllers.CourseController.GetCourseMembers (HakatonApi) in 75.0789ms
+2022-12-18 03:34:14.305 +05:00 [INF] Executed endpoint 'HakatonApi.Controllers.CourseController.GetCourseMembers (HakatonApi)'
+2022-12-18 03:34:14.308 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7251/Api.Course/members?courseId=2a8c7f62-b248-4e98-bcd9-b8047d961256 - - - 200 - application/json;+charset=utf-8 104.7763ms
+2022-12-18 03:35:03.474 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7251/api/Account/signup multipart/form-data;+boundary=----WebKitFormBoundarynMDFzSTVo7YIssT8 762
+2022-12-18 03:35:03.485 +05:00 [INF] Executing endpoint 'Hakaton.Api.Controller.AccountController.SignUp (HakatonApi)'
+2022-12-18 03:35:03.488 +05:00 [INF] Route matched with {action = "SignUp", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignUp(Hakaton.Api.Models.SignUpUserDto) on controller Hakaton.Api.Controller.AccountController (HakatonApi).
+2022-12-18 03:35:03.514 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: using lazy loading proxies 
+2022-12-18 03:35:03.534 +05:00 [INF] Executed DbCommand (10ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."AvatarUrl", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."Password", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2022-12-18 03:35:03.551 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Int32), @p2='?', @p3='?', @p4='?', @p5='?' (DbType = Boolean), @p6='?', @p7='?', @p8='?' (DbType = Boolean), @p9='?' (DbType = DateTime), @p10='?', @p11='?', @p12='?', @p13='?', @p14='?', @p15='?' (DbType = Boolean), @p16='?', @p17='?' (DbType = Boolean), @p18='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "AspNetUsers" ("Id", "AccessFailedCount", "AvatarUrl", "ConcurrencyStamp", "Email", "EmailConfirmed", "FirstName", "LastName", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "Password", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18);
+2022-12-18 03:35:03.595 +05:00 [INF] Executed DbCommand (11ms) [Parameters=[@__user_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ClaimType", a."ClaimValue", a."UserId"
+FROM "AspNetUserClaims" AS a
+WHERE a."UserId" = @__user_Id_0
+2022-12-18 03:35:03.613 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT a0."Name"
+FROM "AspNetUserRoles" AS a
+INNER JOIN "AspNetRoles" AS a0 ON a."RoleId" = a0."Id"
+WHERE a."UserId" = @__userId_0
+2022-12-18 03:35:03.623 +05:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2022-12-18 03:35:03.626 +05:00 [INF] Executing OkObjectResult, writing value of type 'HakatonApi.Entities.User'.
+2022-12-18 03:35:03.629 +05:00 [INF] Executed action Hakaton.Api.Controller.AccountController.SignUp (HakatonApi) in 135.2942ms
+2022-12-18 03:35:03.632 +05:00 [INF] Executed endpoint 'Hakaton.Api.Controller.AccountController.SignUp (HakatonApi)'
+2022-12-18 03:35:03.639 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7251/api/Account/signup multipart/form-data;+boundary=----WebKitFormBoundarynMDFzSTVo7YIssT8 762 - 200 - application/json;+charset=utf-8 167.5026ms
+2022-12-18 03:35:08.494 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7251/api/Account/signup multipart/form-data;+boundary=----WebKitFormBoundaryGGmgSZPhm47wWmTM 762
+2022-12-18 03:35:08.537 +05:00 [INF] Executing endpoint 'Hakaton.Api.Controller.AccountController.SignUp (HakatonApi)'
+2022-12-18 03:35:08.539 +05:00 [INF] Route matched with {action = "SignUp", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignUp(Hakaton.Api.Models.SignUpUserDto) on controller Hakaton.Api.Controller.AccountController (HakatonApi).
+2022-12-18 03:35:08.566 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: using lazy loading proxies 
+2022-12-18 03:35:08.596 +05:00 [INF] Executed DbCommand (11ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."AvatarUrl", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."Password", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2022-12-18 03:35:08.633 +05:00 [WRN] User validation failed: DuplicateUserName.
+2022-12-18 03:35:08.639 +05:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-12-18 03:35:08.643 +05:00 [INF] Executed action Hakaton.Api.Controller.AccountController.SignUp (HakatonApi) in 98.1857ms
+2022-12-18 03:35:08.646 +05:00 [INF] Executed endpoint 'Hakaton.Api.Controller.AccountController.SignUp (HakatonApi)'
+2022-12-18 03:35:08.649 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7251/api/Account/signup multipart/form-data;+boundary=----WebKitFormBoundaryGGmgSZPhm47wWmTM 762 - 400 - application/problem+json;+charset=utf-8 160.5625ms
+2022-12-18 03:35:49.117 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7251/api/Account/signup multipart/form-data;+boundary=----WebKitFormBoundaryEkdMx014HQI5EqtA 762
+2022-12-18 03:35:49.129 +05:00 [INF] Executing endpoint 'Hakaton.Api.Controller.AccountController.SignUp (HakatonApi)'
+2022-12-18 03:35:49.131 +05:00 [INF] Route matched with {action = "SignUp", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SignUp(Hakaton.Api.Models.SignUpUserDto) on controller Hakaton.Api.Controller.AccountController (HakatonApi).
+2022-12-18 03:35:49.154 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: using lazy loading proxies 
+2022-12-18 03:35:49.172 +05:00 [INF] Executed DbCommand (7ms) [Parameters=[@__normalizedUserName_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AccessFailedCount", a."AvatarUrl", a."ConcurrencyStamp", a."Email", a."EmailConfirmed", a."FirstName", a."LastName", a."LockoutEnabled", a."LockoutEnd", a."NormalizedEmail", a."NormalizedUserName", a."Password", a."PasswordHash", a."PhoneNumber", a."PhoneNumberConfirmed", a."SecurityStamp", a."TwoFactorEnabled", a."UserName"
+FROM "AspNetUsers" AS a
+WHERE a."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2022-12-18 03:35:49.185 +05:00 [WRN] User validation failed: DuplicateUserName.
+2022-12-18 03:35:49.188 +05:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-12-18 03:35:49.191 +05:00 [INF] Executed action Hakaton.Api.Controller.AccountController.SignUp (HakatonApi) in 55.4523ms
+2022-12-18 03:35:49.194 +05:00 [INF] Executed endpoint 'Hakaton.Api.Controller.AccountController.SignUp (HakatonApi)'
+2022-12-18 03:35:49.198 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7251/api/Account/signup multipart/form-data;+boundary=----WebKitFormBoundaryEkdMx014HQI5EqtA 762 - 400 - application/problem+json;+charset=utf-8 83.1256ms
 2022-12-18 01:48:58.367 +05:00 [INF] User profile is available. Using 'C:\Users\msi\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
 2022-12-18 01:48:58.647 +05:00 [INF] Now listening on: https://localhost:7251
 2022-12-18 01:48:58.649 +05:00 [INF] Now listening on: http://localhost:5251
