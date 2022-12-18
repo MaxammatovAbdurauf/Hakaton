@@ -1256,3 +1256,337 @@ LIMIT 1
 2022-12-18 03:35:49.191 +05:00 [INF] Executed action Hakaton.Api.Controller.AccountController.SignUp (HakatonApi) in 55.4523ms
 2022-12-18 03:35:49.194 +05:00 [INF] Executed endpoint 'Hakaton.Api.Controller.AccountController.SignUp (HakatonApi)'
 2022-12-18 03:35:49.198 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7251/api/Account/signup multipart/form-data;+boundary=----WebKitFormBoundaryEkdMx014HQI5EqtA 762 - 400 - application/problem+json;+charset=utf-8 83.1256ms
+2022-12-18 09:06:10.683 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: using lazy loading proxies 
+2022-12-18 09:06:38.989 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: using lazy loading proxies 
+2022-12-18 09:06:58.896 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: using lazy loading proxies 
+2022-12-18 09:06:59.707 +05:00 [INF] Executed DbCommand (127ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2022-12-18 09:06:59.833 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2022-12-18 09:06:59.902 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2022-12-18 09:06:59.963 +05:00 [INF] Applying migration '20221218040611_addhasdata'.
+2022-12-18 09:08:15.629 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: using lazy loading proxies 
+2022-12-18 09:08:16.323 +05:00 [INF] Executed DbCommand (127ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2022-12-18 09:08:16.451 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2022-12-18 09:08:16.487 +05:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2022-12-18 09:08:16.551 +05:00 [INF] Applying migration '20221218040611_addhasdata'.
+2022-12-18 09:11:18.894 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: using lazy loading proxies 
+2022-12-18 09:11:19.596 +05:00 [INF] Executed DbCommand (134ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2022-12-18 09:11:19.723 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2022-12-18 09:11:19.757 +05:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2022-12-18 09:11:19.820 +05:00 [INF] Applying migration '20221218040611_addhasdata'.
+2022-12-18 09:12:40.586 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: using lazy loading proxies 
+2022-12-18 09:12:41.259 +05:00 [INF] Executed DbCommand (127ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2022-12-18 09:12:41.384 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2022-12-18 09:12:41.420 +05:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2022-12-18 09:12:41.476 +05:00 [INF] Applying migration '20221218040611_addhasdata'.
+2022-12-18 09:13:11.453 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: using lazy loading proxies 
+2022-12-18 09:13:12.137 +05:00 [INF] Executed DbCommand (129ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2022-12-18 09:13:12.251 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2022-12-18 09:13:12.284 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2022-12-18 09:13:12.342 +05:00 [INF] Applying migration '20221218040611_addhasdata'.
+2022-12-18 09:13:43.915 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: using lazy loading proxies 
+2022-12-18 09:13:44.720 +05:00 [INF] Executed DbCommand (182ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2022-12-18 09:13:44.858 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2022-12-18 09:13:44.891 +05:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2022-12-18 09:13:44.951 +05:00 [INF] Applying migration '20221218040611_addhasdata'.
+2022-12-18 09:14:02.039 +05:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-12-18 09:14:02.698 +05:00 [INF] Now listening on: https://localhost:7251
+2022-12-18 09:14:02.706 +05:00 [INF] Now listening on: http://localhost:5251
+2022-12-18 09:14:02.733 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-18 09:14:02.739 +05:00 [INF] Hosting environment: Development
+2022-12-18 09:14:02.746 +05:00 [INF] Content root path: D:\Hakaton\Hakaton.Api\
+2022-12-18 09:14:04.310 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7251/swagger/index.html - -
+2022-12-18 09:14:05.247 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7251/_framework/aspnetcore-browser-refresh.js - -
+2022-12-18 09:14:05.261 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7251/_vs/browserLink - -
+2022-12-18 09:14:05.360 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7251/swagger/index.html - - - 200 - text/html;charset=utf-8 1059.7218ms
+2022-12-18 09:14:05.426 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7251/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 178.9697ms
+2022-12-18 09:14:05.658 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7251/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 397.0284ms
+2022-12-18 09:14:05.834 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7251/swagger/v1/swagger.json - -
+2022-12-18 09:14:51.294 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: using lazy loading proxies 
+2022-12-18 09:15:22.030 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: using lazy loading proxies 
+2022-12-18 09:15:22.876 +05:00 [INF] Executed DbCommand (170ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2022-12-18 09:15:23.018 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2022-12-18 09:15:23.054 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2022-12-18 09:15:23.111 +05:00 [INF] Applying migration '20221218040611_addhasdata'.
+2022-12-18 09:16:18.572 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: using lazy loading proxies 
+2022-12-18 09:17:29.499 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: using lazy loading proxies 
+2022-12-18 09:17:48.867 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: using lazy loading proxies 
+2022-12-18 09:17:49.763 +05:00 [INF] Executed DbCommand (186ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2022-12-18 09:17:49.890 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2022-12-18 09:17:49.948 +05:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2022-12-18 09:17:50.015 +05:00 [INF] Applying migration '20221218040611_addhasdata'.
+2022-12-18 09:18:28.091 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: using lazy loading proxies 
+2022-12-18 09:18:45.663 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: using lazy loading proxies 
+2022-12-18 09:19:09.910 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: using lazy loading proxies 
+2022-12-18 09:19:10.675 +05:00 [INF] Executed DbCommand (160ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2022-12-18 09:19:10.783 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2022-12-18 09:19:10.814 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2022-12-18 09:19:10.878 +05:00 [INF] Applying migration '20221218040611_addhasdata'.
+2022-12-18 09:19:29.377 +05:00 [INF] User profile is available. Using 'C:\Users\user\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-12-18 09:19:30.014 +05:00 [INF] Now listening on: https://localhost:7251
+2022-12-18 09:19:30.021 +05:00 [INF] Now listening on: http://localhost:5251
+2022-12-18 09:19:30.051 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-18 09:19:30.079 +05:00 [INF] Hosting environment: Development
+2022-12-18 09:19:30.098 +05:00 [INF] Content root path: D:\Hakaton\Hakaton.Api\
+2022-12-18 09:19:31.478 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7251/swagger/index.html - -
+2022-12-18 09:19:32.653 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7251/_framework/aspnetcore-browser-refresh.js - -
+2022-12-18 09:19:32.653 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7251/_vs/browserLink - -
+2022-12-18 09:19:32.694 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7251/swagger/index.html - - - 200 - text/html;charset=utf-8 1232.7598ms
+2022-12-18 09:19:32.730 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7251/_framework/aspnetcore-browser-refresh.js - - - 200 11990 application/javascript;+charset=utf-8 76.6803ms
+2022-12-18 09:19:32.825 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7251/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 172.4476ms
+2022-12-18 09:19:33.075 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7251/swagger/v1/swagger.json - -
+2022-12-18 09:19:53.010 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: using lazy loading proxies 
+2022-12-18 09:19:53.856 +05:00 [INF] Executed DbCommand (154ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2022-12-18 09:19:53.987 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2022-12-18 09:19:54.015 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2022-12-18 09:19:54.059 +05:00 [INF] Applying migration '20221218040611_addhasdata'.
+2022-12-18 09:21:13.941 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: using lazy loading proxies 
+2022-12-18 09:21:25.067 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: using lazy loading proxies 
+2022-12-18 09:21:25.963 +05:00 [INF] Executed DbCommand (151ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2022-12-18 09:21:26.118 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2022-12-18 09:21:26.145 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2022-12-18 09:21:26.186 +05:00 [INF] Applying migration '20221218042114_init'.
+2022-12-18 09:21:26.480 +05:00 [ERR] Failed executing DbCommand (27ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "AspNetRoles" (
+    "Id" uuid NOT NULL,
+    "Name" character varying(256) NULL,
+    "NormalizedName" character varying(256) NULL,
+    "ConcurrencyStamp" text NULL,
+    CONSTRAINT "PK_AspNetRoles" PRIMARY KEY ("Id")
+);
+2022-12-18 09:22:05.193 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: using lazy loading proxies 
+2022-12-18 09:22:20.162 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: using lazy loading proxies 
+2022-12-18 09:23:22.287 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: using lazy loading proxies 
+2022-12-18 09:24:13.341 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: using lazy loading proxies 
+2022-12-18 09:24:14.962 +05:00 [INF] Executed DbCommand (915ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE DATABASE hakaton;
+2022-12-18 09:24:15.460 +05:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "__EFMigrationsHistory" (
+    "MigrationId" character varying(150) NOT NULL,
+    "ProductVersion" character varying(32) NOT NULL,
+    CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY ("MigrationId")
+);
+2022-12-18 09:24:15.602 +05:00 [INF] Executed DbCommand (37ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2022-12-18 09:24:15.615 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2022-12-18 09:24:15.658 +05:00 [INF] Applying migration '20221218042322_init'.
+2022-12-18 09:24:15.773 +05:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "AspNetRoles" (
+    "Id" uuid NOT NULL,
+    "Name" character varying(256) NULL,
+    "NormalizedName" character varying(256) NULL,
+    "ConcurrencyStamp" text NULL,
+    CONSTRAINT "PK_AspNetRoles" PRIMARY KEY ("Id")
+);
+2022-12-18 09:24:15.791 +05:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "AspNetUsers" (
+    "Id" uuid NOT NULL,
+    "FirstName" text NULL,
+    "LastName" text NULL,
+    "Password" text NULL,
+    "AvatarUrl" text NULL,
+    "UserName" character varying(256) NULL,
+    "NormalizedUserName" character varying(256) NULL,
+    "Email" character varying(256) NULL,
+    "NormalizedEmail" character varying(256) NULL,
+    "EmailConfirmed" boolean NOT NULL,
+    "PasswordHash" text NULL,
+    "SecurityStamp" text NULL,
+    "ConcurrencyStamp" text NULL,
+    "PhoneNumber" text NULL,
+    "PhoneNumberConfirmed" boolean NOT NULL,
+    "TwoFactorEnabled" boolean NOT NULL,
+    "LockoutEnd" timestamp with time zone NULL,
+    "LockoutEnabled" boolean NOT NULL,
+    "AccessFailedCount" integer NOT NULL,
+    CONSTRAINT "PK_AspNetUsers" PRIMARY KEY ("Id")
+);
+2022-12-18 09:24:15.824 +05:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Courses" (
+    "Id" uuid NOT NULL,
+    "Key" uuid NOT NULL,
+    "CourseName" text NULL,
+    CONSTRAINT "PK_Courses" PRIMARY KEY ("Id")
+);
+2022-12-18 09:24:15.854 +05:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "AspNetRoleClaims" (
+    "Id" integer GENERATED BY DEFAULT AS IDENTITY,
+    "RoleId" uuid NOT NULL,
+    "ClaimType" text NULL,
+    "ClaimValue" text NULL,
+    CONSTRAINT "PK_AspNetRoleClaims" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_AspNetRoleClaims_AspNetRoles_RoleId" FOREIGN KEY ("RoleId") REFERENCES "AspNetRoles" ("Id") ON DELETE CASCADE
+);
+2022-12-18 09:24:15.877 +05:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "AspNetUserClaims" (
+    "Id" integer GENERATED BY DEFAULT AS IDENTITY,
+    "UserId" uuid NOT NULL,
+    "ClaimType" text NULL,
+    "ClaimValue" text NULL,
+    CONSTRAINT "PK_AspNetUserClaims" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_AspNetUserClaims_AspNetUsers_UserId" FOREIGN KEY ("UserId") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE
+);
+2022-12-18 09:24:15.900 +05:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "AspNetUserLogins" (
+    "LoginProvider" text NOT NULL,
+    "ProviderKey" text NOT NULL,
+    "ProviderDisplayName" text NULL,
+    "UserId" uuid NOT NULL,
+    CONSTRAINT "PK_AspNetUserLogins" PRIMARY KEY ("LoginProvider", "ProviderKey"),
+    CONSTRAINT "FK_AspNetUserLogins_AspNetUsers_UserId" FOREIGN KEY ("UserId") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE
+);
+2022-12-18 09:24:15.919 +05:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "AspNetUserRoles" (
+    "UserId" uuid NOT NULL,
+    "RoleId" uuid NOT NULL,
+    CONSTRAINT "PK_AspNetUserRoles" PRIMARY KEY ("UserId", "RoleId"),
+    CONSTRAINT "FK_AspNetUserRoles_AspNetRoles_RoleId" FOREIGN KEY ("RoleId") REFERENCES "AspNetRoles" ("Id") ON DELETE CASCADE,
+    CONSTRAINT "FK_AspNetUserRoles_AspNetUsers_UserId" FOREIGN KEY ("UserId") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE
+);
+2022-12-18 09:24:15.939 +05:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "AspNetUserTokens" (
+    "UserId" uuid NOT NULL,
+    "LoginProvider" text NOT NULL,
+    "Name" text NOT NULL,
+    "Value" text NULL,
+    CONSTRAINT "PK_AspNetUserTokens" PRIMARY KEY ("UserId", "LoginProvider", "Name"),
+    CONSTRAINT "FK_AspNetUserTokens_AspNetUsers_UserId" FOREIGN KEY ("UserId") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE
+);
+2022-12-18 09:24:15.965 +05:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "CourseUsers" (
+    "Id" uuid NOT NULL,
+    "IsAdmin" boolean NOT NULL,
+    "UserId" uuid NOT NULL,
+    "CourseId" uuid NOT NULL,
+    CONSTRAINT "PK_CourseUsers" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_CourseUsers_AspNetUsers_UserId" FOREIGN KEY ("UserId") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE,
+    CONSTRAINT "FK_CourseUsers_Courses_CourseId" FOREIGN KEY ("CourseId") REFERENCES "Courses" ("Id") ON DELETE CASCADE
+);
+2022-12-18 09:24:15.989 +05:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "HomeWorks" (
+    "Id" uuid NOT NULL,
+    "TaskName" text NULL,
+    "TaskDescription" text NULL,
+    "MaxScore" integer NOT NULL,
+    "Status" integer NOT NULL,
+    "FilePath" text NULL,
+    "CreateDate" timestamp with time zone NULL,
+    "StartDate" timestamp with time zone NULL,
+    "EndDate" timestamp with time zone NULL,
+    "CourseId" uuid NOT NULL,
+    CONSTRAINT "PK_HomeWorks" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_HomeWorks_Courses_CourseId" FOREIGN KEY ("CourseId") REFERENCES "Courses" ("Id") ON DELETE CASCADE
+);
+2022-12-18 09:24:16.022 +05:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Results" (
+    "Id" uuid NOT NULL,
+    "StudentComment" text NULL,
+    "TeacherComment" text NULL,
+    "Score" integer NULL,
+    "ResultStatus" integer NOT NULL,
+    "CompletedTime" timestamp with time zone NULL,
+    "FilePath" text NULL,
+    "UserId" uuid NOT NULL,
+    "HomeWorkId" uuid NOT NULL,
+    CONSTRAINT "PK_Results" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_Results_AspNetUsers_UserId" FOREIGN KEY ("UserId") REFERENCES "AspNetUsers" ("Id") ON DELETE CASCADE,
+    CONSTRAINT "FK_Results_HomeWorks_HomeWorkId" FOREIGN KEY ("HomeWorkId") REFERENCES "HomeWorks" ("Id") ON DELETE CASCADE
+);
+2022-12-18 09:24:16.042 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_AspNetRoleClaims_RoleId" ON "AspNetRoleClaims" ("RoleId");
+2022-12-18 09:24:16.056 +05:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "RoleNameIndex" ON "AspNetRoles" ("NormalizedName");
+2022-12-18 09:24:16.064 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_AspNetUserClaims_UserId" ON "AspNetUserClaims" ("UserId");
+2022-12-18 09:24:16.078 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_AspNetUserLogins_UserId" ON "AspNetUserLogins" ("UserId");
+2022-12-18 09:24:16.088 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_AspNetUserRoles_RoleId" ON "AspNetUserRoles" ("RoleId");
+2022-12-18 09:24:16.097 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "EmailIndex" ON "AspNetUsers" ("NormalizedEmail");
+2022-12-18 09:24:16.107 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "UserNameIndex" ON "AspNetUsers" ("NormalizedUserName");
+2022-12-18 09:24:16.115 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_CourseUsers_CourseId" ON "CourseUsers" ("CourseId");
+2022-12-18 09:24:16.124 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_CourseUsers_UserId" ON "CourseUsers" ("UserId");
+2022-12-18 09:24:16.133 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_HomeWorks_CourseId" ON "HomeWorks" ("CourseId");
+2022-12-18 09:24:16.147 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Results_HomeWorkId" ON "Results" ("HomeWorkId");
+2022-12-18 09:24:16.158 +05:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Results_UserId" ON "Results" ("UserId");
+2022-12-18 09:24:16.167 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20221218042322_init', '6.0.11');
+2022-12-18 09:25:06.058 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: using lazy loading proxies 
+2022-12-18 09:25:24.554 +05:00 [INF] Entity Framework Core 6.0.11 initialized 'AppDbContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.7+5b98e4b74de93b590b44aef8dd7967c03acc433c' with options: using lazy loading proxies 
+2022-12-18 09:25:25.233 +05:00 [INF] Executed DbCommand (130ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2022-12-18 09:25:25.339 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2022-12-18 09:25:25.373 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2022-12-18 09:25:25.425 +05:00 [INF] Applying migration '20221218042506_initagain'.
+2022-12-18 09:25:25.498 +05:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20221218042506_initagain', '6.0.11');

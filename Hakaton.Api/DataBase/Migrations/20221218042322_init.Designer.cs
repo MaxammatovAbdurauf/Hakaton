@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace HakatonApi.Database.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20221217125628_someentities")]
-    partial class someentities
+    [Migration("20221218042322_init")]
+    partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -24,30 +24,120 @@ namespace HakatonApi.Database.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("HakatonApi.Entities.Result", b =>
+            modelBuilder.Entity("HakatonApi.Entities.Course", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
-                    b.Property<string>("AdminComment")
+                    b.Property<string>("CourseName")
                         .HasColumnType("text");
 
-                    b.Property<string>("Description")
-                        .HasColumnType("text");
-
-                    b.Property<int>("ResultStatus")
-                        .HasColumnType("integer");
-
-                    b.Property<Guid>("TaskId")
+                    b.Property<Guid>("Key")
                         .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Courses");
+                });
+
+            modelBuilder.Entity("HakatonApi.Entities.CourseUser", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("CourseId")
+                        .HasColumnType("uuid");
+
+                    b.Property<bool>("IsAdmin")
+                        .HasColumnType("boolean");
 
                     b.Property<Guid>("UserId")
                         .HasColumnType("uuid");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("TaskId");
+                    b.HasIndex("CourseId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("CourseUsers");
+                });
+
+            modelBuilder.Entity("HakatonApi.Entities.HomeWork", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("CourseId")
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime?>("CreateDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<DateTime?>("EndDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("FilePath")
+                        .HasColumnType("text");
+
+                    b.Property<int>("MaxScore")
+                        .HasColumnType("integer");
+
+                    b.Property<DateTime?>("StartDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("TaskDescription")
+                        .HasColumnType("text");
+
+                    b.Property<string>("TaskName")
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CourseId");
+
+                    b.ToTable("HomeWorks");
+                });
+
+            modelBuilder.Entity("HakatonApi.Entities.Result", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime?>("CompletedTime")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("FilePath")
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("HomeWorkId")
+                        .HasColumnType("uuid");
+
+                    b.Property<int>("ResultStatus")
+                        .HasColumnType("integer");
+
+                    b.Property<int?>("Score")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("StudentComment")
+                        .HasColumnType("text");
+
+                    b.Property<string>("TeacherComment")
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("HomeWorkId");
 
                     b.HasIndex("UserId");
 
@@ -81,38 +171,6 @@ namespace HakatonApi.Database.Migrations
                     b.ToTable("AspNetRoles", (string)null);
                 });
 
-            modelBuilder.Entity("HakatonApi.Entities.Task", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
-
-                    b.Property<DateTime?>("CreateDate")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<DateTime?>("EndDate")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<int>("MaxScore")
-                        .HasColumnType("integer");
-
-                    b.Property<DateTime?>("StartDate")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<int>("Status")
-                        .HasColumnType("integer");
-
-                    b.Property<string>("TaskDescription")
-                        .HasColumnType("text");
-
-                    b.Property<string>("TaskName")
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Tasks");
-                });
-
             modelBuilder.Entity("HakatonApi.Entities.User", b =>
                 {
                     b.Property<Guid>("Id")
@@ -121,6 +179,9 @@ namespace HakatonApi.Database.Migrations
 
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("integer");
+
+                    b.Property<string>("AvatarUrl")
+                        .HasColumnType("text");
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
@@ -290,21 +351,51 @@ namespace HakatonApi.Database.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("HakatonApi.Entities.Result", b =>
+            modelBuilder.Entity("HakatonApi.Entities.CourseUser", b =>
                 {
-                    b.HasOne("HakatonApi.Entities.Task", "Task")
-                        .WithMany("UserTasks")
-                        .HasForeignKey("TaskId")
+                    b.HasOne("HakatonApi.Entities.Course", "Course")
+                        .WithMany("CourseUsers")
+                        .HasForeignKey("CourseId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("HakatonApi.Entities.User", "User")
-                        .WithMany("UserTasks")
+                        .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Task");
+                    b.Navigation("Course");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("HakatonApi.Entities.HomeWork", b =>
+                {
+                    b.HasOne("HakatonApi.Entities.Course", "Course")
+                        .WithMany("HomeWorks")
+                        .HasForeignKey("CourseId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Course");
+                });
+
+            modelBuilder.Entity("HakatonApi.Entities.Result", b =>
+                {
+                    b.HasOne("HakatonApi.Entities.HomeWork", "HomeWork")
+                        .WithMany("Results")
+                        .HasForeignKey("HomeWorkId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("HakatonApi.Entities.User", "User")
+                        .WithMany("HomeWorks")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("HomeWork");
 
                     b.Navigation("User");
                 });
@@ -360,14 +451,21 @@ namespace HakatonApi.Database.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("HakatonApi.Entities.Task", b =>
+            modelBuilder.Entity("HakatonApi.Entities.Course", b =>
                 {
-                    b.Navigation("UserTasks");
+                    b.Navigation("CourseUsers");
+
+                    b.Navigation("HomeWorks");
+                });
+
+            modelBuilder.Entity("HakatonApi.Entities.HomeWork", b =>
+                {
+                    b.Navigation("Results");
                 });
 
             modelBuilder.Entity("HakatonApi.Entities.User", b =>
                 {
-                    b.Navigation("UserTasks");
+                    b.Navigation("HomeWorks");
                 });
 #pragma warning restore 612, 618
         }

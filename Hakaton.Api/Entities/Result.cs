@@ -9,7 +9,7 @@ public class Result
     public string? TeacherComment { get; set; }
     public int? Score { get; set; }
     public EUserTaskStatus ResultStatus { get; set; }
-    public DateTime CompletedTime { get; set; }
+    public DateTime? CompletedTime { get; set; }
     public string? FilePath { get; set; }
     public Guid UserId { get; set; }
     [ForeignKey(nameof(UserId))]  

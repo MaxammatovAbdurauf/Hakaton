@@ -32,6 +32,7 @@ namespace HakatonApi.Database.Migrations
                     FirstName = table.Column<string>(type: "text", nullable: true),
                     LastName = table.Column<string>(type: "text", nullable: true),
                     Password = table.Column<string>(type: "text", nullable: true),
+                    AvatarUrl = table.Column<string>(type: "text", nullable: true),
                     UserName = table.Column<string>(type: "character varying(256)", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "character varying(256)", maxLength: 256, nullable: true),
                     Email = table.Column<string>(type: "character varying(256)", maxLength: 256, nullable: true),
@@ -53,21 +54,16 @@ namespace HakatonApi.Database.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Tasks",
+                name: "Courses",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
-                    Title = table.Column<string>(type: "text", nullable: true),
-                    TaskDescription = table.Column<string>(type: "text", nullable: true),
-                    MaxScore = table.Column<int>(type: "integer", nullable: false),
-                    Status = table.Column<int>(type: "integer", nullable: false),
-                    CreateDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
-                    StartDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
-                    EndDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true)
+                    Key = table.Column<Guid>(type: "uuid", nullable: false),
+                    CourseName = table.Column<string>(type: "text", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Tasks", x => x.Id);
+                    table.PrimaryKey("PK_Courses", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -177,15 +173,70 @@ namespace HakatonApi.Database.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "CourseUsers",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    IsAdmin = table.Column<bool>(type: "boolean", nullable: false),
+                    UserId = table.Column<Guid>(type: "uuid", nullable: false),
+                    CourseId = table.Column<Guid>(type: "uuid", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_CourseUsers", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_CourseUsers_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_CourseUsers_Courses_CourseId",
+                        column: x => x.CourseId,
+                        principalTable: "Courses",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "HomeWorks",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    TaskName = table.Column<string>(type: "text", nullable: true),
+                    TaskDescription = table.Column<string>(type: "text", nullable: true),
+                    MaxScore = table.Column<int>(type: "integer", nullable: false),
+                    Status = table.Column<int>(type: "integer", nullable: false),
+                    FilePath = table.Column<string>(type: "text", nullable: true),
+                    CreateDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    StartDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    EndDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    CourseId = table.Column<Guid>(type: "uuid", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_HomeWorks", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_HomeWorks_Courses_CourseId",
+                        column: x => x.CourseId,
+                        principalTable: "Courses",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Results",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
-                    Description = table.Column<string>(type: "text", nullable: true),
-                    AdminComment = table.Column<string>(type: "text", nullable: true),
+                    StudentComment = table.Column<string>(type: "text", nullable: true),
+                    TeacherComment = table.Column<string>(type: "text", nullable: true),
+                    Score = table.Column<int>(type: "integer", nullable: true),
                     ResultStatus = table.Column<int>(type: "integer", nullable: false),
+                    CompletedTime = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    FilePath = table.Column<string>(type: "text", nullable: true),
                     UserId = table.Column<Guid>(type: "uuid", nullable: false),
-                    TaskId = table.Column<Guid>(type: "uuid", nullable: false)
+                    HomeWorkId = table.Column<Guid>(type: "uuid", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -197,9 +248,9 @@ namespace HakatonApi.Database.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Results_Tasks_TaskId",
-                        column: x => x.TaskId,
-                        principalTable: "Tasks",
+                        name: "FK_Results_HomeWorks_HomeWorkId",
+                        column: x => x.HomeWorkId,
+                        principalTable: "HomeWorks",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -242,9 +293,24 @@ namespace HakatonApi.Database.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_Results_TaskId",
+                name: "IX_CourseUsers_CourseId",
+                table: "CourseUsers",
+                column: "CourseId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_CourseUsers_UserId",
+                table: "CourseUsers",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_HomeWorks_CourseId",
+                table: "HomeWorks",
+                column: "CourseId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Results_HomeWorkId",
                 table: "Results",
-                column: "TaskId");
+                column: "HomeWorkId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Results_UserId",
@@ -270,6 +336,9 @@ namespace HakatonApi.Database.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
+                name: "CourseUsers");
+
+            migrationBuilder.DropTable(
                 name: "Results");
 
             migrationBuilder.DropTable(
@@ -279,7 +348,10 @@ namespace HakatonApi.Database.Migrations
                 name: "AspNetUsers");
 
             migrationBuilder.DropTable(
-                name: "Tasks");
+                name: "HomeWorks");
+
+            migrationBuilder.DropTable(
+                name: "Courses");
         }
     }
 }
