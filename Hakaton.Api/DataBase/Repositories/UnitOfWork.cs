@@ -48,7 +48,15 @@ public class UnitOfWork : IUnitOfWork
             return _userRepository;
         }
     }
-
+    private IResultRepository _resultRepository;
+    public IResultRepository ResultRepository
+    {
+        get
+        {
+            if (_resultRepository is null) _resultRepository = new ResultRepository(context);
+            return _resultRepository;
+        }
+    }
     public UnitOfWork(AppDbContext _context)
     {
         context = _context;
