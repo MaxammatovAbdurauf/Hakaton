@@ -6,10 +6,11 @@ namespace HakatonApi.DataBase;
 
 public class AppDbContext : IdentityDbContext<User, Role, Guid>
 {
-    public DbSet<HomeTaskResult>? Results { get; set; }
+    public DbSet<Result>? Results { get; set; }
     public DbSet<HomeWork>? HomeWorks { get; set; }
     public DbSet<User>? Users { get; set; }
     public DbSet<Course> Courses { get; set; }
+    public DbSet<Result> Result { get; set; }
     public DbSet<CourseUser> CourseUsers { get; set; }
     public AppDbContext(DbContextOptions options) : base(options) { }
 
@@ -66,9 +67,9 @@ public class AppDbContext : IdentityDbContext<User, Role, Guid>
             }
         });
 
-        builder.Entity<HomeTaskResult>().HasData(new List<HomeTaskResult>
+        builder.Entity<Result>().HasData(new List<Result>
         {
-            new HomeTaskResult
+            new Result
             {
                 Id = Guid.NewGuid(),
                 UserId = userId,
@@ -79,7 +80,7 @@ public class AppDbContext : IdentityDbContext<User, Role, Guid>
                 ResultStatus = EUserTaskStatus.rejected,
             },
 
-            new HomeTaskResult
+            new Result
             {
                 Id = Guid.NewGuid(),
                 UserId = userId,
