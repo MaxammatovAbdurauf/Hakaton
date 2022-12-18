@@ -40,19 +40,30 @@ public class AccountController : ControllerBase
     }
 
     [HttpPost("signin")]
-    public async Task<IActionResult> SignIn(string userName, string password)
+    public async Task<IActionResult> SignIn([FromForm] SignInUserDto signInUserDto)
     {
-        var result = await signInManager.PasswordSignInAsync(userName, password, true, true);
+        var result = await signInManager.PasswordSignInAsync(signInUserDto.UserName, 
+                                                             signInUserDto.Password, true, true);
         if (!result.Succeeded)
             return BadRequest();
 
         return Ok();
     }
 
+    [HttpGet]
+    [Authorize]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    public IActionResult GetUser (Guid userId)
+    {
+        var user = accountService.GetUser(userId);
+        if (user is null) return NotFound();
+        return Ok(user);
+    }
+
     [HttpPut]
     [Authorize]
     [ProducesResponseType(StatusCodes.Status200OK)]
-    public async Task<IActionResult> UpdateAccount(UpdateUserDto updateUserDto)
+    public async Task<IActionResult> UpdateAccount([FromForm] UpdateUserDto updateUserDto)
     {
         var user = await userManager.GetUserAsync(User);
         accountService.UpdateAccount(user.Id, updateUserDto);

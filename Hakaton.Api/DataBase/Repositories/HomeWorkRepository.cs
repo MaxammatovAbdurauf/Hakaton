@@ -2,6 +2,7 @@
 using HakatonApi.Extensions.AddServiceFromAttribute;
 
 namespace HakatonApi.DataBase.Repositories;
+
 [Scoped]
 public class HomeWorkRepository : GenericRepository<HomeWork>, IHomeWorkRepository
 {

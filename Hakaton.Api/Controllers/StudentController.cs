@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace HakatonApi.Controllers;
 
+[Route("[controller]")]
+[ApiController]
 public class StudentController : Controller
 {
     private readonly UserService studentService;
@@ -21,7 +23,7 @@ public class StudentController : Controller
     public async Task<IActionResult> JoinToCourse(Guid courseId)
     {
         var user = await userManager.GetUserAsync(User);
-        await studentService.JoinToCourse(user.Id, courseId);
+        await studentService.JoinToCourse(courseId, user.Id);
         return Ok();
     }
 
@@ -30,7 +32,7 @@ public class StudentController : Controller
     public async Task<IActionResult> LeaveCourse(Guid courseId)
     {
         var user = await userManager.GetUserAsync(User);
-        studentService.LeaveCourse(user.Id, courseId);
+        await studentService.LeaveCourse(courseId, user.Id);
         return Ok();
     }
 }

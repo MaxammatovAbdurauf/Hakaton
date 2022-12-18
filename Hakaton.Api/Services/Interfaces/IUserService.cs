@@ -5,6 +5,6 @@ namespace HakatonApi.Services.Interfaces;
 
 public interface IUserService 
 {
-    void LeaveCourse(Guid courseId, Guid userId);
+    Task LeaveCourse(Guid courseId, Guid userId);
     Task JoinToCourse(Guid courseId, Guid userId);
 }
