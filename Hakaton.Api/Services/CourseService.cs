@@ -14,7 +14,7 @@ public class CourseService : ICourseService
     private readonly IUnitOfWork context;
     public CourseService(IUnitOfWork _context) => context = _context;
 
-    public async Task<Guid> CreateCourse(Guid userId, GetCourseDto createCource)
+    public async Task<Guid> CreateCourse(Guid userId, CreateCourseDto createCource)
     {
         var key = Guid.NewGuid();
         var courseId = Guid.NewGuid();

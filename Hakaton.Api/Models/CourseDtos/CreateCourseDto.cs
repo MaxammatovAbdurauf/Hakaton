@@ -1,6 +1,6 @@
 ﻿namespace HakatonApi.Models.CourseDtos;
 
-public class GetCourseDto
+public class CreateCourseDto
 {
     public string? CourseName { get; set; }
 }
