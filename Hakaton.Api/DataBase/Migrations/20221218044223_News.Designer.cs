@@ -3,6 +3,7 @@ using System;
 using HakatonApi.DataBase;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,10 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace HakatonApi.Database.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20221218044223_News")]
+    partial class News
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -45,7 +47,7 @@ namespace HakatonApi.Database.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
-                    b.Property<Guid>("CourseId")
+                    b.Property<Guid?>("CourseId")
                         .HasColumnType("uuid");
 
                     b.Property<DateTime?>("CreateDate")
@@ -85,23 +87,20 @@ namespace HakatonApi.Database.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
-                    b.Property<DateTime?>("CompletedTime")
+                    b.Property<DateTime>("CompletedTime")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("FilePath")
                         .HasColumnType("text");
 
-                    b.Property<Guid>("HomeWorkId")
-                        .HasColumnType("uuid");
-
                     b.Property<int>("ResultStatus")
-                        .HasColumnType("integer");
-
-                    b.Property<int?>("Score")
                         .HasColumnType("integer");
 
                     b.Property<string>("StudentComment")
                         .HasColumnType("text");
+
+                    b.Property<Guid>("TaskId")
+                        .HasColumnType("uuid");
 
                     b.Property<string>("TeacherComment")
                         .HasColumnType("text");
@@ -111,7 +110,7 @@ namespace HakatonApi.Database.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("HomeWorkId");
+                    b.HasIndex("TaskId");
 
                     b.HasIndex("UserId");
 
@@ -351,30 +350,26 @@ namespace HakatonApi.Database.Migrations
 
             modelBuilder.Entity("HakatonApi.Entities.HomeWork", b =>
                 {
-                    b.HasOne("HakatonApi.Entities.Course", "Course")
+                    b.HasOne("HakatonApi.Entities.Course", null)
                         .WithMany("HomeWorks")
-                        .HasForeignKey("CourseId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Course");
+                        .HasForeignKey("CourseId");
                 });
 
             modelBuilder.Entity("HakatonApi.Entities.Result", b =>
                 {
-                    b.HasOne("HakatonApi.Entities.HomeWork", "HomeWork")
-                        .WithMany("Results")
-                        .HasForeignKey("HomeWorkId")
+                    b.HasOne("HakatonApi.Entities.HomeWork", "Task")
+                        .WithMany("UserTasks")
+                        .HasForeignKey("TaskId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("HakatonApi.Entities.User", "User")
-                        .WithMany("HomeWorks")
+                        .WithMany("UserTasks")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("HomeWork");
+                    b.Navigation("Task");
 
                     b.Navigation("User");
                 });
@@ -458,12 +453,12 @@ namespace HakatonApi.Database.Migrations
 
             modelBuilder.Entity("HakatonApi.Entities.HomeWork", b =>
                 {
-                    b.Navigation("Results");
+                    b.Navigation("UserTasks");
                 });
 
             modelBuilder.Entity("HakatonApi.Entities.User", b =>
                 {
-                    b.Navigation("HomeWorks");
+                    b.Navigation("UserTasks");
                 });
 #pragma warning restore 612, 618
         }

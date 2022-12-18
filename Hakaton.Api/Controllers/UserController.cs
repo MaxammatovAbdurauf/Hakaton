@@ -7,18 +7,18 @@ namespace HakatonApi.Controllers;
 
 [Route("[controller]")]
 [ApiController]
-public class StudentController : Controller
+public class UserController : Controller
 {
     private readonly UserService studentService;
     private readonly UserManager<User> userManager;
-    public StudentController (UserService _studentService,
+    public UserController (UserService _studentService,
                              UserManager<User> _userManager)
     {
         studentService = _studentService; 
         userManager = _userManager;
     }
 
-    [HttpPost]
+    [HttpPost("join")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     public async Task<IActionResult> JoinToCourse(Guid courseId)
     {
@@ -27,7 +27,7 @@ public class StudentController : Controller
         return Ok();
     }
 
-    [HttpGet]
+    [HttpGet("leave")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     public async Task<IActionResult> LeaveCourse(Guid courseId)
     {
