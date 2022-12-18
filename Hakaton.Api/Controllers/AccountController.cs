@@ -36,6 +36,7 @@ public class AccountController : ControllerBase
             return BadRequest();
 
         await signInManager.SignInAsync(user, true);
+        await accountService.AddUser(registerUserDto);
         return Ok(user);
     }
 

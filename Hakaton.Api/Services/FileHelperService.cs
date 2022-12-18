@@ -8,8 +8,9 @@ namespace HakatonApi.Services;
 [Scoped]
 public class FileHelperService : IFileHelperService
 {
-    public async Task<string?> SaveFileAsync([NotNull] IFormFile file, EFileType fileTypeEnum, EFileFolder fileFolderEnum)
+    public async Task<string?> SaveFileAsync(IFormFile? file, EFileType fileTypeEnum, EFileFolder fileFolderEnum)
     {
+        if(file is null ) return null;
         var fileFolder = fileFolderEnum.ToString();
         var fileType = fileTypeEnum.ToString();
 

@@ -1,6 +1,7 @@
 ﻿using HakatonApi.DataBase.Repositories;
 using HakatonApi.Entities;
 using HakatonApi.Extensions.AddServiceFromAttribute;
+using HakatonApi.Models;
 using HakatonApi.Models.UserDtos;
 using HakatonApi.Services.Interfaces;
 
@@ -10,7 +11,27 @@ namespace HakatonApi.Services;
 public class AccountService : IAccountService
 {
     private readonly IUnitOfWork context;
-    public AccountService(IUnitOfWork _context) => context = _context;
+    private readonly IFileHelperService fileHelperService;
+    public AccountService(IUnitOfWork context, IFileHelperService fileHelperService)
+    {
+        this.context = context;
+        this.fileHelperService = fileHelperService;
+    }
+       
+
+    public async Task AddUser (SignUpUserDto signUpUserDto)
+    {
+        var imagepath = await fileHelperService.SaveFileAsync(signUpUserDto.Avatar!,EFileType.Images, EFileFolder.User);
+        var user = new User
+        {
+            UserName = signUpUserDto.UserName,
+            FirstName = signUpUserDto.FirstName,
+            LastName = signUpUserDto.LastName,
+            Password = signUpUserDto.Password,
+            AvatarUrl = imagepath
+        };
+        await context.UserRepository.AddAsync(user);
+    }
 
     public User? GetUser (Guid userId) => context.UserRepository.GetById(userId);
 

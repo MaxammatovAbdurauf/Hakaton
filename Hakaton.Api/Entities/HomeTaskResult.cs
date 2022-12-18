@@ -2,7 +2,7 @@
 
 namespace HakatonApi.Entities;
 
-public class Result
+public class HomeTaskResult
 {
     public Guid Id { get; set; }
     public string? StudentComment { get; set; }

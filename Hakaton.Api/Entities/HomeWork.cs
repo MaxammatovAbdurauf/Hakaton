@@ -17,7 +17,7 @@ public class HomeWork
     [ForeignKey(nameof(CourseId))]
     public virtual Course? Course { get; set; }  
 
-    public virtual List<Result>? Results { get; set; }
+    public virtual List<HomeTaskResult>? Results { get; set; }
 }
 
 public enum TaskStatus
