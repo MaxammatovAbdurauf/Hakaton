@@ -5,32 +5,34 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace HakatonApi.Controllers;
 
-public class StudentController : Controller
+[Route("[controller]")]
+[ApiController]
+public class UserController : Controller
 {
     private readonly UserService studentService;
     private readonly UserManager<User> userManager;
-    public StudentController (UserService _studentService,
+    public UserController (UserService _studentService,
                              UserManager<User> _userManager)
     {
         studentService = _studentService; 
         userManager = _userManager;
     }
 
-    [HttpPost]
+    [HttpPost("join")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     public async Task<IActionResult> JoinToCourse(Guid courseId)
     {
         var user = await userManager.GetUserAsync(User);
-        await studentService.JoinToCourse(user.Id, courseId);
+        await studentService.JoinToCourse(courseId, user.Id);
         return Ok();
     }
 
-    [HttpGet]
+    [HttpGet("leave")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     public async Task<IActionResult> LeaveCourse(Guid courseId)
     {
         var user = await userManager.GetUserAsync(User);
-        studentService.LeaveCourse(user.Id, courseId);
+        await studentService.LeaveCourse(courseId, user.Id);
         return Ok();
     }
 }

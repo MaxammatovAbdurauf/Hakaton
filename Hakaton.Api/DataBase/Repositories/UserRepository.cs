@@ -1,9 +1,10 @@
 ﻿using HakatonApi.Entities;
-using HakatonApi.DataBase.Repositories;
+using HakatonApi.Extensions.AddServiceFromAttribute;
 
 namespace HakatonApi.DataBase.Repositories;
 
+[Scoped]
 public class UserRepository : GenericRepository<User>, IUserRepository
 {
-    public UserRepository(AppDbContext context) : base (context) { }
+    public UserRepository(AppDbContext context) : base(context) { }
 }

@@ -1,17 +1,15 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
-namespace HakatonApi.Controllers
+namespace HakatonApi.Controllers;
+
+[Route("api/[controller]")]
+[ApiController]
+public class HomeWorkController : ControllerBase
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class HomeWorkController : ControllerBase
+    [HttpGet]
+    public IActionResult GetTasks()
     {
-        [HttpGet]
-        public IActionResult GetTasks()
-        {
-            return Ok();
-        }
-        
+        return Ok();
     }
+
 }

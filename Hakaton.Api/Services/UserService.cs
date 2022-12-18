@@ -1,14 +1,16 @@
 ﻿using HakatonApi.DataBase.Repositories;
 using HakatonApi.Entities;
-using HakatonApi.Models.UserDtos;
+using HakatonApi.Extensions.AddServiceFromAttribute;
 using HakatonApi.Services.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
 namespace HakatonApi.Services;
 
+[Scoped]
 public class UserService : IUserService
 {
     private readonly IUnitOfWork context;
-    public UserService (IUnitOfWork _context) => context = _context;
+    public UserService(IUnitOfWork _context) => context = _context;
 
     public async Task JoinToCourse(Guid courseId, Guid userId)
     {
@@ -32,10 +34,12 @@ public class UserService : IUserService
         await context.SaveAsync();
     }
 
-    public void LeaveCourse(Guid userId, Guid courseId)
+    public async Task LeaveCourse(Guid courseId, Guid userId)
     {
-        var courseUser =  context.CourseUserRepository.GetById(userId);
-        if (courseUser is null) throw new Exception("you are not member of this course");
-        context.CourseUserRepository.Remove(courseUser);
+        var courseUsers =await  context.CourseUserRepository.GetAll().ToListAsync();
+        var currentCourseUser = courseUsers.FirstOrDefault(u => u.UserId == userId);
+
+        if (currentCourseUser is null) throw new Exception("you are not member of this course");
+        await context.CourseUserRepository.Remove(currentCourseUser);
     }
 }
