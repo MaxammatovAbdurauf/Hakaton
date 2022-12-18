@@ -56,6 +56,14 @@ public class CourseController : ControllerBase
         return Ok();
     }
 
+    [HttpPost("join")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    public async Task<IActionResult> JoinToCourse(Guid courseId)
+    {
+        var user = await userManager.GetUserAsync(User);
+        await courseService.JointoCourse(courseId, user.Id);
+        return Ok();
+    }
 
     [HttpGet("members")]
     [ProducesResponseType(typeof(List<User>), StatusCodes.Status200OK)]
@@ -64,4 +72,6 @@ public class CourseController : ControllerBase
         var members = await courseService.GetCourseMembers(courseId);
         return Ok(members);
     }
+
+
 }
