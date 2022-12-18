@@ -1,40 +1,57 @@
-﻿using HakatonApi.DataBase;
+﻿using HakatonApi.Entities;
 using HakatonApi.Models.ResultDtos;
-using Mapster;
-using Microsoft.AspNetCore.Http;
+using HakatonApi.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
-namespace HakatonApi.Controllers
+namespace HakatonApi.Controllers;
+
+[Route("api/[controller]")]
+[ApiController]
+[Authorize]
+public class ResultController : ControllerBase
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class ResultController : ControllerBase
+    private readonly IResultService resultService;
+
+    private readonly UserManager<User> userManager;
+    public ResultController(IResultService resultService,
+    IFileHelperService fileHelperService,
+            UserManager<User> userManager)
     {
-        private readonly AppDbContext _context;
+        this.resultService = resultService;
+        this.userManager = userManager;
+    }
 
-        public ResultsController(AppDbContext context)
-        {
-            _context = context;
-        }
+    [HttpPost]
+    [ProducesResponseType(typeof(ResultView), StatusCodes.Status200OK)]
+    public async Task<ResultView> AddAsync(CreateResultDto createResultDto)
+    {
+        var user = await userManager.GetUserAsync(User);
+        return await resultService.AddResult(user.Id, createResultDto);
+    }
 
-        [HttpGet("{courseId}/tasks/{taskId}/results")]
-        public async Task<IActionResult> GetTaskResults(Guid courseId, Guid taskId)
-        {
+    [HttpGet("all")]
+    public async Task<List<ResultView>> GetResults(Guid homeworkId)
+    {
+        return await resultService.GetResults(homeworkId);
+    }
 
-            if (task.Results is null) 
-                return Ok();
-               
-            return Ok(taskDto);
-        }
+    [HttpGet("Id")]
+    public async Task GetResultById(Guid resultId)
+    {
+        await resultService.GetResultById(resultId);
+    }
 
+    [HttpDelete]
+    public async Task DeleteResult(Guid resultId)
+    {
+        await resultService.DeleteResult(resultId);
+    }
 
-        [HttpPut("{courseId}/tasks/{taskId}/results/{resultId}")]
-        public async Task<IActionResult> UpdateUserResult(Guid courseId, Guid taskId, Guid resultId, CreateUserTaskResultDto resultDto)
-        {
-            return Ok();
-        }
-
-
+    [HttpPut]
+    public async Task Updateresult(UpdateResultDto updateResultDto)
+    {
+        await resultService.UpdateResult(updateResultDto);
     }
 }

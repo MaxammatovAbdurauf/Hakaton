@@ -7,6 +7,10 @@ namespace HakatonApi.DataBase.Repositories;
 public class UnitOfWork : IUnitOfWork
 {
     private readonly AppDbContext context;
+    public UnitOfWork(AppDbContext _context)
+    {
+        context = _context;
+    }
 
     private ICourseRepository? _courseRepository;
     public ICourseRepository CourseRepository
@@ -17,6 +21,7 @@ public class UnitOfWork : IUnitOfWork
             return _courseRepository;
         }
     }
+
     private IHomeWorkRepository _homeWorkRepository;
     public IHomeWorkRepository HomeWorkRepository
     {
@@ -48,6 +53,7 @@ public class UnitOfWork : IUnitOfWork
             return _userRepository;
         }
     }
+
     private IResultRepository _resultRepository;
     public IResultRepository ResultRepository
     {
@@ -57,18 +63,14 @@ public class UnitOfWork : IUnitOfWork
             return _resultRepository;
         }
     }
-    public UnitOfWork(AppDbContext _context)
-    {
-        context = _context;
-    }
 
     public int Save() => context.SaveChanges();
+
+    public Task<int> SaveAsync() => context.SaveChangesAsync();
 
     public void Dispose()
     {
         context.Dispose();
         GC.SuppressFinalize(this);
     }
-
-    public Task<int> SaveAsync() => context.SaveChangesAsync();
 }

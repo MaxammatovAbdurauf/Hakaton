@@ -1,8 +1,8 @@
-﻿namespace HakatonApi.Entities
+﻿namespace HakatonApi.Entities;
+
+public enum EFileType
 {
-    public enum EFileType
-    {
-        Images,
-        Files
-    }
+    Images,
+    Files,
+    Result
 }
